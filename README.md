@@ -98,20 +98,8 @@ Below is an overview of each folder/file's purpose and recommended management st
 |       |-- serviceWorker.js
 |       |-- setupTests.js
 |   |-- /scss/
-|       |-- _adStyles.scss              # SRFC specific - may not apply to LA Galaxy
-|       |-- _cardButtons.scss           # Button panel and buttons styles associated within the panels
-|       |-- _cardDetails.scss           # Event details for both front and back of card
-|       |-- _eventFlag.scss             # Top left corner flag that can be used for icon labeling
-|       |-- _eventPromo.scss            # Promo styles for promotional details on back of cards
-|       |-- _familyDay.scss             # SRFC promo specific - may not apply to LA Galaxy depending on their event promotions
-|       |-- _global.scss                # Global associated styles - functional styles from JS
-|       |-- _header.scss                # Card headings for home/away events - may not apply to LA Galaxy SGT page
-|       |-- _localEnvironment.scss      # Local Environment specific styles - feel free to add to this!
-|       |-- _logos.scss                 # Logo styles for all cards
-|       |-- _monthHeading.scss          # Month Heading styles
-|       |-- _ticketCard.scss            # Card styles for each event/game
-|       |-- _variables.scss             # LA Galaxy Color Palette
-|       |-- style.scss
+|       |-- _cssReset.scss              # CSS Reset
+|       |-- _variables.scss             # Brand colors
 |   |-- index.partial.html              # HTML used for the .append() in script.js
 |   |-- index.template.html
 |
