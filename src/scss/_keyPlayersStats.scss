@@ -1,0 +1,250 @@
+.cardRow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.firstName {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.imageWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-repeat: no-repeat;
+}
+
+.kpsComponent {
+  width: 45vw;
+  margin-right: 25px;
+}
+
+.kpsTitle {
+  font-family: 'UnitedSansCdHv', franklin-gothic-urw !important;
+  margin-bottom: 20px;
+}
+
+.kpsWrapper {
+  overflow-x: hidden;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+}
+
+.lastName {
+  font-size: 2rem;
+  line-height: 0.4;
+}
+
+.miniNames {
+}
+
+.miniNumber {
+  font-family: 'UnitedSansCdBd', franklin-gothic-urw !important;
+  font-weight: bold;
+  font-size: 1.3rem;
+  /* margin-bottom: 2rem; */
+}
+
+.miniPlayerCard {
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  background-image: linear-gradient(#ffffff, #eeeeee);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.miniPicWrapper {
+  bottom: 0;
+}
+
+.miniPlayerPic {
+  margin-top: 25px;
+  height: auto;
+  width: 7.5vw;
+}
+
+.miniPlayerStats {
+  line-height: 0.5;
+  padding: 0.7em;
+  margin-left: 0.5em;
+}
+
+.miniRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.playerCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  margin-left: 0px;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  width: 100%;
+  padding: 3vh;
+  background-image: linear-gradient(#ffffff, #eeeeee);
+}
+
+.playerInfo {
+  font-family: 'UnitedSansCdBd', franklin-gothic-urw !important;
+  line-height: 1;
+}
+
+.playerNumber {
+  font-size: 6rem;
+  font-family: 'UnitedSansCdBd', franklin-gothic-urw !important;
+}
+
+.playerPic {
+  height: auto;
+  width: 100%;
+}
+
+.playerStats {
+  margin-top: 10vh;
+  line-height: 0.7;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.statsTitle {
+  color: #aaa;
+  font-family: 'UnitedSansCdBd', franklin-gothic-urw !important;
+  text-transform: uppercase;
+}
+
+/* Phones */
+@media only screen and (max-width: 425px) {
+  /* .kpsTitle {background: red;} */
+
+  .kpsComponent {
+    width: 90vw;
+    /* margin-right: 25px; */
+    margin-bottom: 20px;
+  }
+
+  .kpsWrapper {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .firstName {
+    font-size: 1.2rem;
+  }
+
+  .lastName {
+    font-size: 1rem;
+  }
+
+  .playerStats {
+    line-height: 1.1;
+    font-size: 0.6rem;
+    margin-top: 0px;
+  }
+
+  /* .playerStats{
+    margin-top: 10vh;
+    line-height: .7;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  } */
+
+  .playerNumber {
+    font-size: 3rem;
+  }
+
+  .playerPic {
+    height: auto;
+    width: 100%;
+  }
+
+  .miniNames {
+    display: none;
+  }
+
+  .miniNumber {
+    /* display: none; */
+  }
+
+  .miniPlayerCard {
+    grid-template-columns: 0fr 1fr;
+  }
+
+  .miniPlayerPic {
+    height: auto;
+    width: 100%;
+  }
+
+  .miniPlayerStats {
+    margin-left: 0rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 426px) {
+  /* .kpsTitle {background: blue;} */
+
+  .firstName {
+    font-size: 1.8rem;
+  }
+
+  .playerNumber {
+    font-size: 3rem;
+  }
+
+  .kpsComponent {
+    width: 45vw;
+    /* margin-right: 25px; */
+    margin-bottom: 20px;
+  }
+
+  .kpsWrapper {
+    padding-left: 20px;
+    padding-right: 0px;
+  }
+
+  .lastName {
+    font-size: 1.4rem;
+  }
+
+  .miniLast {
+    margin-bottom: 0px;
+  }
+
+  .miniNames {
+    font-size: 0.8rem;
+    margin: 0rem;
+    line-height: 0;
+    padding-left: 2px;
+  }
+
+  .miniNumber {
+    margin-top: 10px;
+  }
+
+  .miniPlayerPic {
+    height: auto;
+    width: 100%;
+  }
+
+  .miniPlayerStats {
+    padding: 0px;
+  }
+
+  .playerStats {
+    line-height: 1.1;
+    font-size: 0.8rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1024px) {
+  /* .kpsTitle {background: orange;} */
+}
