@@ -1,0 +1,103 @@
+.postGameMainContainer {
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1170px;
+}
+
+.postGameScoreContainer {
+  border: solid darkgray;
+  margin-top: 2em;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+.postGameHeaderRow {
+  border-bottom: solid darkgray;
+  margin: 0;
+}
+
+.postGameHeader {
+  padding: 1em 0 .5em 2em;
+}
+
+.finalRow {
+  background-color: gray;
+  border-bottom: solid darkgray;
+  margin: 0;
+}
+
+.final {
+  text-align: center;
+  padding: .5em 0 .4em 0;
+}
+
+.postGameTeamsContainer {
+  position: relative;
+  border-bottom: solid darkgray;
+}
+
+.postGameRowPadding {
+  padding: 0 4em;
+  background-color: lightgray;
+}
+
+.postGameFirstTeam, .postGameSecondTeam {
+  text-align: center;
+  padding: 6em 0 6em 0;
+}
+
+.versus {
+  text-align: center;
+  padding-top: 11em;
+}
+
+/* for mobile view only */
+.postGameMobileVideo {
+  display: none;
+}
+/* end */
+
+.quarters h3 {
+  text-align: center;
+  padding: .5em 0 .4em 0;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+  /* first post game container (all content) */
+  .postGameMainContainer {
+    margin-left: .4em;
+    margin-right: .4em;
+  }
+  /* end */
+
+  .postGameDesktopOnly{
+    display: none;
+  }
+
+  /* dispayed only for mobile view */
+  .postGameMobileVideo {
+    display: inherit;
+    border-bottom: solid darkGray;
+    background-color: lightGray;
+    text-align: center;
+    padding-top: 1.2em;
+  }
+
+  .postGameMobileVideo h3 {
+    padding-bottom: 160px;
+  }
+
+  .postGameMobileVideo h1 {
+    padding-bottom: 200px;
+  }
+
+  .postGameMobileContent {
+    display: inherit;
+    padding: 2em;
+  }
+  /* end */
+}

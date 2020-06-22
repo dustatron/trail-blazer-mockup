@@ -1,0 +1,141 @@
+.preGameMainContainer {
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1170px;
+}
+
+.preGameScoreContainer {
+  border: solid darkgray;
+  margin-top: 2em;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+.preGameHeaderRow {
+  border-bottom: solid darkgray;
+  margin: 0;
+}
+
+.preGameHeader {
+  padding: 1em 0 0.5em 2em;
+}
+
+.preGameHeaderRow button {
+  margin: 1em 0.5em;
+  padding: 0.3em 1.2em;
+  background-color: rgb(120, 120, 120);
+  color: white;
+}
+
+.preGameContainer {
+  border-bottom: solid darkgray;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+/* Header for mobile only */
+.preGameMobileHeader {
+  display: none;
+}
+/* end */
+
+.preGameContainer button {
+  margin: 1em 0.5em;
+  padding: 0.3em 1.2em;
+  background-color: rgb(120, 120, 120);
+  color: white;
+  font-size: 1.5em;
+}
+
+.gamePreviewContainer {
+  margin-top: 2.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-top: solid darkgray;
+  border-bottom: solid darkgray;
+  background-color: lightgray;
+}
+
+.videoPreview {
+  background-color: lightgray;
+}
+
+.videoPreview h1 {
+  padding-top: 3em;
+  text-align: center;
+}
+
+.contentBoxRight {
+  border-top: solid darkgray;
+  border-bottom: solid darkgray;
+  border-left: solid darkgray;
+  padding: 1em;
+  background-color: white;
+}
+
+.preGameContent {
+  padding: 2em;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+  /* first pregame container (all content) */
+  .preGameMainContainer {
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+  }
+  /* end first pregame container */
+
+  /* second pregame container (header and ticket button) */
+  .preGameScoreContainer {
+    border: none;
+  }
+
+  .preGameHeaderRow,
+  .preGameContainer h3,
+  .preGameContainer p {
+    display: none;
+  }
+
+  .preGameContainer {
+    background-color: lightgray;
+    border: solid darkgray;
+  }
+
+  .preGameMobileHeader {
+    display: inherit;
+    text-align: center;
+    /* padding used to fill space for POC, remove padding once space is filled with other content */
+    padding-bottom: 300px;
+    /* end */
+  }
+
+  .preGameContainer button {
+    margin: 0 auto 0.75em auto;
+    display: block;
+    width: 65%;
+  }
+  /* end second pregame container */
+
+  /* third pregame container (video) */
+  .gamePreviewContainer {
+    border: solid darkgray;
+  }
+
+  .videoPreview {
+    margin: 0 auto;
+  }
+
+  .videoPreview h1 {
+    padding-top: 180px;
+    padding-bottom: 180px;
+  }
+
+  .contentBoxRight {
+    display: none;
+  }
+  /* end third pregame container */
+}

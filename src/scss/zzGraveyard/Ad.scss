@@ -1,0 +1,25 @@
+.adMainContainer {
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1170px;
+}
+
+.adContainer {
+  width: 900px;
+  height: 80px;
+  border: solid darkgray;
+  margin: 2em auto 0 auto;
+  background-color: lightgray;
+}
+
+.adContainer h3 {
+  text-align: center;
+  margin: 0.65em;
+}
+
+@media only screen and (max-width: 768px) {
+  .adContainer {
+    width: 90%;
+  }
+}

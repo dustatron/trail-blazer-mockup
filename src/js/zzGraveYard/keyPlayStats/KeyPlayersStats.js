@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../scss/_keyPlayersStats.scss';
+import '../../../scss/zzGraveyard/_keyPlayersStats.scss';
 import testJsonObject from './test_json_object';
 
 function KeyPlayersStats() {

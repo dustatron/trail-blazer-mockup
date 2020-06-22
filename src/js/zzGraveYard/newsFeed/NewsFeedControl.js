@@ -1,7 +1,7 @@
 import React from 'react';
 
 import testJsonObject from './test_json_object.js';
-import '../../../scss/_NewsFeedControl.scss';
+import '../../../scss/zzGraveyard/_NewsFeedControl.scss';
 
 //Components
 

@@ -3,6 +3,7 @@ import Hero from './Hero';
 import CTA from './CTA';
 import KeyPlayers from './KeyPlayers';
 import NewsFeed from './NewsFeed';
+import UpcomingGames from './UpcomingGames';
 import ArenaInfo from './ArenaInfo';
 import Footer from './Footer';
 
@@ -14,6 +15,7 @@ const index = () => {
       <CTA />
       <KeyPlayers />
       <NewsFeed />
+      <UpcomingGames />
       <ArenaInfo />
       <Footer />
     </div>

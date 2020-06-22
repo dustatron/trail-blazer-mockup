@@ -1,0 +1,147 @@
+.liveGameMainContainer {
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1170px;
+}
+
+.liveGameScoreContainer {
+  border: solid darkgray;
+  margin-top: 2em;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+.liveGameHeaderRow {
+  border-bottom: solid darkgray;
+  margin: 0;
+}
+
+.liveGameHeader {
+  padding: 1em 0 .5em 2em;
+}
+
+.liveGameTeamsContainer {
+  position: relative;
+  border-bottom: solid darkgray;
+}
+
+.liveGameScoreBox {
+  width: 200px;
+  border-left: solid darkgray;
+  border-bottom: solid darkgray;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  text-align: center;
+  background-color: white;
+}
+
+.liveGameScoreBox p {
+  border-bottom: solid darkgray;
+  background-color: lightgray;
+}
+
+.liveGameScoreBox h4 {
+  padding: .5em;
+}
+
+.rowPadding {
+  padding: 0 4em;
+  background-color: lightgray;
+}
+
+.liveGameFirstTeam, .liveGameSecondTeam {
+  text-align: center;
+  padding: 6em 0 6em 0;
+}
+
+.versus {
+  text-align: center;
+  padding-top: 11em;
+}
+
+.liveGameScoreFeedContainer {
+  margin-top: 2.5em;
+}
+
+.liveGameScoreFeedContainer .col-12 {
+  text-align: center;
+  background-color: lightgray;
+  border-top: solid darkgray;
+  padding-top: .2em;
+  height: 2em;
+}
+
+.scoreFeedBoxes {
+  margin: 0;
+  width: 100%;
+}
+
+.scoreFeedBoxes .col {
+  text-align: center;
+  border-top: solid darkgray;
+  border-right: solid darkgray;
+  padding-top: .3em;
+  font-size: 1.1em;
+}
+
+.scoreFeedBoxes p {
+  font-size: 1.1em;
+}
+
+.scoreFeedBoxes .noBorderRight {
+  border-right: none;
+}
+
+/* content for mobile view only */
+.liveGameMobileVideo,
+.liveGameMobileContent {
+  display: none;
+}
+/* end */
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+  /* first live game container (all content) */
+  .liveGameMainContainer {
+    margin-left: .4em;
+    margin-right: .4em;
+  }
+  /* end */
+
+  .liveGameScoreContainer {
+    border: none;
+  }
+
+  /* hides sections for mobile view (live game header, live game score box, team images, and game scores for other teams) */
+  .liveGameDesktopOnly {
+    display: none;
+  }
+  /* end */
+
+  /* dispayed only for mobile view */
+  .liveGameMobileVideo {
+    display: inherit;
+    border: solid darkGray;
+    background-color: lightGray;
+    text-align: center;
+    padding-top: 1.2em;
+  }
+
+  .liveGameMobileVideo h3 {
+    padding-bottom: 160px;
+  }
+
+  .liveGameMobileVideo h1 {
+    padding-bottom: 200px;
+  }
+
+  .liveGameMobileContent {
+    display: inherit;
+    padding: 2em;
+  }
+  /* end */
+}
