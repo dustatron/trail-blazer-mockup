@@ -14,6 +14,12 @@ function App() {
           <Route path='/key-players-stats' component={KeyPlayersStats} />
           <Route path='/news-feed' component={NewsFeedControl} />
           <Route path='/pre-game' component={PreGame} />
+          <Route path='/ad' component={Ad} />
+          <Route path='/LiveGame' component={LiveGame} />
+          <Route path='/Nav' component={Nav} />
+          <Route path='/PostGame' component={PostGame} />
+          <Route path='/PreGame' component={PreGame} />
+
           <Route exact path='/'>
             <SimpleLinks />
           </Route>
