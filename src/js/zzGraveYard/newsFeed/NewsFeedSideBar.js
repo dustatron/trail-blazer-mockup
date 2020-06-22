@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../../scss/_NewsFeedSideBar.scss';
-import '../../scss/_NewsFeedMobileStyle.scss';
+import '../../../scss/_NewsFeedSideBar.scss';
+import '../../../scss/_NewsFeedMobileStyle.scss';
 
 export default function NewsFeedSideBar(props) {
   //write function to cut off text at certain char limit. This way it won't overflow and break div

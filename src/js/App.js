@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Test from './Test';
-import SimpleLinks from './simpleLinks';
-import KeyPlayersStats from './keyPlayStats/KeyPlayersStats';
-import NewsFeedControl from './newsFeed/NewsFeedControl';
+import SimpleLinks from './SimpleLinks';
+import KeyPlayersStats from './zzGraveYard/keyPlayStats/KeyPlayersStats';
+import NewsFeedControl from './zzGraveYard/newsFeed/NewsFeedControl';
+import PreGame from './PreGame';
 function App() {
   return (
     <Fragment>
@@ -12,6 +13,7 @@ function App() {
           <Route path='/test' component={Test} />
           <Route path='/key-players-stats' component={KeyPlayersStats} />
           <Route path='/news-feed' component={NewsFeedControl} />
+          <Route path='/pre-game' component={PreGame} />
           <Route exact path='/'>
             <SimpleLinks />
           </Route>

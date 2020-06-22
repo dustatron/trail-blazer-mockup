@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../../scss/_NewsFeedMain.scss';
-import '../../scss/_NewsFeedMobileStyle.scss';
+import '../../../scss/_NewsFeedMain.scss';
+import '../../../scss/_NewsFeedMobileStyle.scss';
 
 export default function NewsFeedMain(props) {
   //Function to limit char length of content. This will keep the div from becoming huge in the event of a long article.

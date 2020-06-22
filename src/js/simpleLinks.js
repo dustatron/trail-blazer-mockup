@@ -2,8 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 const simpleLinks = () => {
   return (
-    <div>
-      <h1>Hello from App</h1>
+    <div style={{ width: '80%', margin: 'auto' }}>
+      <h1>Master Links</h1>
+      <p>
+        <Link to='/pre-game'>Pre Game master layout</Link>
+      </p>
       <p>
         <Link to='/key-players-stats'>Key Players stats</Link>
       </p>
