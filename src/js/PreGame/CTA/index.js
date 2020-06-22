@@ -1,7 +1,7 @@
 import React from 'react';
 
 ///////  CTA INDEX //////
-const index = () => {
+const Index = () => {
   return (
     <div>
       <h1>Call To Action</h1>
@@ -9,4 +9,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

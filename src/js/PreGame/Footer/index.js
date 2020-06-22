@@ -1,7 +1,7 @@
 import React from 'react';
 
 ///////  FOOTER INDEX //////
-const index = () => {
+const Index = () => {
   return (
     <div>
       <h1>Footer</h1>
@@ -9,4 +9,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
