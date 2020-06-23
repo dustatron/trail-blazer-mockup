@@ -1,4 +1,4 @@
-# List of needed api link
+# List of needed api end points
 
 ## Player data
 
