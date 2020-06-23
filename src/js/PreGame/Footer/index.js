@@ -4,7 +4,7 @@ import React from 'react';
 const Index = () => {
   return (
     <div>
-      <h1>Footer</h1>
+      <h1>Footer - Provided by Drupal</h1>
     </div>
   );
 };
