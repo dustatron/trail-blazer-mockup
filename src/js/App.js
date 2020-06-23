@@ -10,7 +10,7 @@ import UpcomingGames from './PreGame/UpcomingGames';
 import ArenaInfo from './PreGame/ArenaInfo';
 import Footer from './PreGame/Footer';
 
-import SimpleLinks from './SimpleLinks';
+import SimpleLinks from './simpleLinks';
 import KeyPlayersStats from './zzGraveYard/keyPlayStats/KeyPlayersStats';
 import NewsFeedControl from './zzGraveYard/newsFeed/NewsFeedControl';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const simpleLinks = () => {
+const SimpleLinks = () => {
   return (
     <div style={{ width: '80%', margin: 'auto' }}>
       <h1 style={{ fontWeight: 'bolder', margin: '10px', fontSize: '2em' }}>
@@ -52,4 +52,4 @@ const simpleLinks = () => {
   );
 };
 
-export default simpleLinks;
+export default SimpleLinks;
