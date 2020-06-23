@@ -1,0 +1,71 @@
+@import '../main.scss';
+
+// Main component
+.news-feed {
+  position: relative;
+  // border: 1px solid orange;
+  &-header {
+    margin: 1.5em 0;
+    &-title {
+      margin: 0.5em 4em;
+      h1 {
+        font-size: 1.7em;
+        font-weight: bolder;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+      }
+    }
+    &-bar {
+      width: 100%;
+      margin-bottom: 1.5em;
+    }
+  }
+}
+
+.news-item {
+  position: relative;
+  height: 15em;
+  width: 100%;
+  margin: 1.5em 0;
+  // border: 1px solid red;
+  display: flex;
+
+  &-left {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    &-img {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &-right {
+    display: inline-block;
+    width: 45%;
+    height: 100%;
+    padding: 20px;
+    &-title {
+      text-transform: uppercase;
+      font-weight: bolder;
+      font-size: 1.4em;
+      line-height: 1.2;
+      a:hover,
+      a:visited,
+      a:link,
+      a:active {
+        color: $blazers-red;
+        text-decoration: none;
+      }
+    }
+    &-teaser {
+      font-family: $content;
+      font-weight: normal;
+      margin-top: 0.5em;
+      font-size: 0.95 em;
+      line-height: 1.2;
+    }
+  }
+}

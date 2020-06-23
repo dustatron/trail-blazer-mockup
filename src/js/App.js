@@ -17,6 +17,8 @@ import NewsFeedControl from './zzGraveYard/newsFeed/NewsFeedControl';
 import PreGame from './PreGame';
 import GameScore from './zzGraveYard/gameScore';
 
+import '../scss/components/_app.scss';
+
 //Styles
 
 function App() {
@@ -24,25 +26,25 @@ function App() {
     <Fragment>
       <Router>
         <Switch>
+          <Route exact path='/'>
+            <SimpleLinks />
+          </Route>
           <Route path='/test' component={Test} />
-
           <Route path='/pre-game' component={PreGame} />
-          <Route path='/hero' component={Hero} />
-          <Route path='/CTA' component={CTA} />
-          <Route path='/KeyPlayers' component={KeyPlayers} />
-          <Route path='/NewsFeed' component={NewsFeed} />
-          <Route path='/UpcomingGames' component={UpcomingGames} />
-          <Route path='/ArenaInfo' component={ArenaInfo} />
-          <Route path='/Footer' component={Footer} />
+          <div className='container'>
+            <Route path='/hero' component={Hero} />
+            <Route path='/CTA' component={CTA} />
+            <Route path='/KeyPlayers' component={KeyPlayers} />
+            <Route path='/NewsFeed' component={NewsFeed} />
+            <Route path='/UpcomingGames' component={UpcomingGames} />
+            <Route path='/ArenaInfo' component={ArenaInfo} />
+            <Route path='/Footer' component={Footer} />
+          </div>
 
           {/* ////////// Old Components ///////// */}
           <Route path='/key-players-stats' component={KeyPlayersStats} />
           <Route path='/game-score' component={GameScore} />
           <Route path='/news-feed' component={NewsFeedControl} />
-
-          <Route exact path='/'>
-            <SimpleLinks />
-          </Route>
         </Switch>
       </Router>
     </Fragment>

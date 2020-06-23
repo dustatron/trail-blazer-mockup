@@ -1,0 +1,9 @@
+@import '../main.scss';
+
+.container {
+  width: 65%;
+  margin: auto;
+  @include respond(tab-port) {
+    width: 100%;
+  }
+}

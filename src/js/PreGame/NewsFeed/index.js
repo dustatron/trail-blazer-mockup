@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import NewsItem from './NewsItem';
+import pageheaderbar from '../../../media/pageheaderbar.png';
+import '../../../scss/components/_news-feed.scss';
 
 ///////  NEWS FEED INDEX //////
 const Index = () => {
@@ -20,8 +23,22 @@ const Index = () => {
   }, []);
 
   return (
-    <div>
-      <h1>News Feed {feedData.length}</h1>
+    <div className='news-feed'>
+      <div className='news-feed-header'>
+        <div className='news-feed-header-title'>
+          <h1>News Feed</h1>
+        </div>
+        <img className='news-feed-header-bar' src={pageheaderbar} alt='' />
+      </div>
+      {feedData.map(({ nid, url, title, teaser, thumbnail }) => (
+        <NewsItem
+          key={nid}
+          img={thumbnail}
+          title={title}
+          url={url}
+          teaser={teaser}
+        />
+      ))}
     </div>
   );
 };

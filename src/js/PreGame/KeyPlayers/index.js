@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import '../../../scss/KeyPlayers/_key-players.scss';
+import '../../../scss/components/_key-players.scss';
 import coloredLine from '../../../media/coloredLine.svg';
 
 ///////  KEY PLAYER INDEX //////
