@@ -1,21 +1,48 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Fragment } from 'react';
 import HeaderBarTemplate from '../../Shared/HeaderBarTemplate';
-
+import { tempData } from './tempData';
+// Styling
 import '../../../scss/components/_key-players.scss';
-import coloredLine from '../../../media/coloredLine.svg';
 
 ///////  KEY PLAYER INDEX //////
 const Index = () => {
-  const [playerData, setPlayerData] = useState([1]);
+  const [alertMessage, setAlertMessage] = useState('');
+  const [playerData, setPlayerData] = useState({
+    home: [],
+    visiting: [],
+  });
+  // Alert Message presented to the user when api Fails to load.
+  const alertReadout = 'Key Players data could not to load. Enable Cores';
+
+  // Api Call for key user data.
+  // !!Currently awaiting correct end point link.
+  const callApi = async () => {
+    try {
+      const response = await fetch('need end point!!')
+        .then((response) => response.json())
+        .then((data) => data.content);
+      setPlayerData(response);
+    } catch (error) {
+      setAlertMessage(alertReadout);
+      console.error('News Feed API FAILED: ', error.message);
+    }
+  };
+
   useEffect(() => {
-    //Get from API
-    setPlayerData([2]);
+    // Get data from API.
+    // When ready uncomment this CallApi.
+    // callApi();
+
+    // Currently importing fake data.
+    // When ready delete the line below.
+    setPlayerData(tempData);
   }, []);
   return (
-    <div>
+    <Fragment>
       <HeaderBarTemplate title={'Key Players'} />
-      <h1>Key Players {playerData[0]}</h1>
-    </div>
+      {alertMessage && <div className='alert-message'> {alertMessage} </div>}
+      <div className='key-players'>Key players</div>
+    </Fragment>
   );
 };
 

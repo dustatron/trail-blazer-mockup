@@ -14,6 +14,8 @@ const HeaderBarTemplate = ({ title }) => {
   );
 };
 
-HeaderBarTemplate.propTypes = {};
+HeaderBarTemplate.propTypes = {
+  title: PropTypes.string.isRequired,
+};
 
 export default HeaderBarTemplate;

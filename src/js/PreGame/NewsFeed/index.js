@@ -7,6 +7,7 @@ import '../../../scss/components/_news-feed.scss';
 const Index = () => {
   const [feedData, setFeed] = useState([]);
   const [alertMessage, setAlertMessage] = useState(null);
+  // Alert Message presented to the user when api Fails to load.
   const alertReadout = 'News feed failed to load. Enable Cores';
 
   const callApi = async () => {
@@ -26,25 +27,25 @@ const Index = () => {
   }, []);
 
   return (
-    <div className='news-feed'>
+    <Fragment>
       <HeaderBarTemplate title={'news feed'} />
-      {alertMessage && (
-        <div className='news-feed-alert-message'> {alertMessage} </div>
-      )}
-      {feedData.map(({ nid, url, title, teaser, thumbnail }, i) => (
-        <Fragment>
-          {i < 4 && (
-            <NewsItem
-              key={nid}
-              img={thumbnail}
-              title={title}
-              url={url}
-              teaser={teaser}
-            />
-          )}
-        </Fragment>
-      ))}
-    </div>
+      <div className='news-feed'>
+        {alertMessage && <div className='alert-message'> {alertMessage} </div>}
+        {feedData.map(({ nid, url, title, teaser, thumbnail }, i) => (
+          <Fragment>
+            {i < 4 && (
+              <NewsItem
+                key={nid}
+                img={thumbnail}
+                title={title}
+                url={url}
+                teaser={teaser}
+              />
+            )}
+          </Fragment>
+        ))}
+      </div>
+    </Fragment>
   );
 };
 
