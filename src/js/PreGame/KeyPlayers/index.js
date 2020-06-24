@@ -1,16 +1,20 @@
 import React, { useEffect, useState, Fragment } from 'react';
 import HeaderBarTemplate from '../../Shared/HeaderBarTemplate';
-import { tempData } from './tempData';
-// Styling
+import Player from './Player';
+// Styling.
 import '../../../scss/components/_key-players.scss';
+// Temp Data for mockup.
+import { tempData } from './tempData';
 
 ///////  KEY PLAYER INDEX //////
 const Index = () => {
-  const [alertMessage, setAlertMessage] = useState('');
+  // Local component state.
+  const [alertMessage, setAlertMessage] = useState(null);
   const [playerData, setPlayerData] = useState({
     home: [],
     visiting: [],
   });
+  const { home, visiting } = playerData;
   // Alert Message presented to the user when api Fails to load.
   const alertReadout = 'Key Players data could not to load. Enable Cores';
 
@@ -41,7 +45,18 @@ const Index = () => {
     <Fragment>
       <HeaderBarTemplate title={'Key Players'} />
       {alertMessage && <div className='alert-message'> {alertMessage} </div>}
-      <div className='key-players'>Key players</div>
+      <div className='key-players'>
+        <div className='key-players-home'>
+          {home.map((player) => (
+            <Player player={player} />
+          ))}
+        </div>
+        <div className='key-players-visiting'>
+          {visiting.map((player) => (
+            <Player player={player} />
+          ))}
+        </div>
+      </div>
     </Fragment>
   );
 };
