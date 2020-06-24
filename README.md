@@ -1,7 +1,5 @@
 # Blazers Pre-Post-Game 
 
-----
-
 ### A React build of the TailBlazers Pre, live, and Post game pages. 
 ### _Created by, Alysia Petti, Alex Shreen, Dusty McCord. June, 2020_
 
@@ -15,8 +13,6 @@
 - Still need to find the correct API endpoint for KeyPlayer data.
 - Created a reusable Header Bar component in /js/Shared/HeaderBarTemplate.js
   - pass `title={'title you want'}` and the component should render out a title bar. 
-
-----
 
 ## Links to Designs
 
@@ -32,13 +28,12 @@
 
 [Mobile](https://david292023.invisionapp.com/public/share/DQ14YSRT6S#/screens/477789211)
 
-----
-
 ## API Endpoints  
 
 Here is some reference code from the original code. 
 This code block seems to be making the bulk of all the api calls. 
-[Reference link to original code](./documentation/oldApiCode.md)
+
+**[Reference link to original code](./documentation/oldApiCode.md)**
 
 ### <u>Player data</u>
 
@@ -89,7 +84,7 @@ headers: {
   },
 ```
 
-----
+
 
 ## Useful Links
 
@@ -110,8 +105,6 @@ player.id is a string of numbers
 player.id is a string of numbers
 
 `http://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/1040x760/${player.id}.png`
-
-----
 
 ## Installation instructions
 
