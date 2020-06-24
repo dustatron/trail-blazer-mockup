@@ -19,8 +19,8 @@
         padding: 0 3rem;
     }
 ----------------------------
-
-0-600 = phone
+0-400 = xsm 
+400-600 = phone
 900-1200 = tablet
 1200-1800 = desktop
 1800 + big desktop
@@ -31,11 +31,16 @@ $breakpoint argument choices:
  - tab-land
  - big-desktop
 
- ORDER: base + typography > gerneral layout + grid > page layout > components
+ ORDER: base + typography > general layout + grid > page layout > components
 
 */
 @mixin respond($breakpoint) {
   //check parameter
+  @if $breakpoint == xsm {
+    @media (max-width: 24em) {
+      @content;
+    }
+  }
   @if $breakpoint == phone {
     @media (max-width: 37.5em) {
       @content;

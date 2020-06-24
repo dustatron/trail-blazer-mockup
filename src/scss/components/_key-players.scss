@@ -1,1 +1,122 @@
 @import '../main.scss';
+
+.key-players {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  @include respond(tab-port) {
+    margin-bottom: 2em;
+  }
+  @include respond(phone) {
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+}
+
+.header-key-players {
+  @include respond(tab-port) {
+    display: none;
+  }
+}
+.header-home {
+  display: none;
+  @include respond(tab-port) {
+    display: inline-block;
+    margin: 0px 10px;
+  }
+}
+.header-away {
+  display: none;
+  @include respond(tab-port) {
+    display: inline-block;
+    margin: 0px 10px;
+  }
+}
+
+.player {
+  margin: 30px 10px;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: 5px;
+  height: 276px;
+  width: 24em;
+  @include respond(tab-port) {
+    margin: 20px 5px;
+  }
+  @include respond(phone) {
+    max-width: 90%;
+    min-width: 20em;
+    margin: 20px auto;
+  }
+
+  &-top {
+    border-bottom: 1px solid $border;
+    font-weight: 900;
+    font-size: 0.6em;
+    padding: 10px 20px;
+    &-points {
+      display: inline;
+    }
+    &-view-all {
+      display: inline;
+      float: right;
+    }
+  }
+  &-bottom {
+    position: relative;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+
+    // border: 1px solid yellow;
+    &-score {
+      // border: 1px solid green;
+      display: flex;
+      flex-direction: column;
+      // width: 33%;
+      padding: 20px 40px;
+      @include respond(tab-port) {
+        padding: 10px 30px;
+      }
+
+      &-number {
+        font-weight: 900;
+        font-size: 3em;
+      }
+      &-info {
+        margin-top: 10px;
+        font-size: 0.68em;
+        font-weight: 600;
+        &-name {
+          display: block;
+        }
+        &-season {
+          display: block;
+          margin-top: 6px;
+        }
+      }
+    }
+    &-img {
+      // border: 1px solid red;
+
+      img {
+        display: block;
+        margin: auto;
+        // height: 100%;
+        width: 180px;
+        position: absolute;
+        bottom: 0;
+        right: 30px;
+        @include respond(tab-port) {
+          width: 160px;
+          right: 10px;
+          bottom: 5px;
+        }
+      }
+    }
+  }
+}

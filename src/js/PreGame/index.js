@@ -7,17 +7,21 @@ import UpcomingGames from './UpcomingGames';
 import ArenaInfo from './ArenaInfo';
 import Footer from './Footer';
 
+import '../../scss/components/_pre-game-index.scss';
+
 ///////  PRE GAME INDEX //////
 const index = () => {
   return (
-    <div>
-      <Hero />
-      <CTA />
-      <KeyPlayers />
-      <NewsFeed />
-      <UpcomingGames />
-      <ArenaInfo />
-      <Footer />
+    <div className='pre-game'>
+      <div className='pre-game-container'>
+        <Hero />
+        <CTA />
+        <KeyPlayers />
+        <NewsFeed />
+        <UpcomingGames />
+        <ArenaInfo />
+        <Footer />
+      </div>
     </div>
   );
 };
