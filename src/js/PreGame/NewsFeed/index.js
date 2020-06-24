@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import NewsItem from './NewsItem';
-import pageheaderbar from '../../../media/pageheaderbar.png';
+import HeaderBarTemplate from '../../Shared/HeaderBarTemplate';
 import '../../../scss/components/_news-feed.scss';
 
 ///////  NEWS FEED INDEX //////
@@ -27,12 +27,7 @@ const Index = () => {
 
   return (
     <div className='news-feed'>
-      <div className='news-feed-header'>
-        <div className='news-feed-header-title'>
-          <h1>News Feed</h1>
-        </div>
-        <img className='news-feed-header-bar' src={pageheaderbar} alt='' />
-      </div>
+      <HeaderBarTemplate title={'news feed'} />
       {alertMessage && (
         <div className='news-feed-alert-message'> {alertMessage} </div>
       )}

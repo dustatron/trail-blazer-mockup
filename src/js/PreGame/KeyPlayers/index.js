@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import HeaderBarTemplate from '../../Shared/HeaderBarTemplate';
 
 import '../../../scss/components/_key-players.scss';
 import coloredLine from '../../../media/coloredLine.svg';
@@ -12,8 +13,8 @@ const Index = () => {
   }, []);
   return (
     <div>
+      <HeaderBarTemplate title={'Key Players'} />
       <h1>Key Players {playerData[0]}</h1>
-      <img src={coloredLine} alt='separator' />
     </div>
   );
 };
