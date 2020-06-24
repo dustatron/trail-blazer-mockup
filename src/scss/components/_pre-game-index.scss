@@ -4,11 +4,11 @@
   position: relative;
   width: 100%;
   &-container {
-    width: 65%;
+    max-width: 60em;
     margin: auto;
     background: $back-ground-gray;
     @include respond(tab-land) {
-      width: 100%;
+      max-width: 100%;
     }
   }
 }

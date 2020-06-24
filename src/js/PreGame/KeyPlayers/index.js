@@ -43,7 +43,12 @@ const Index = () => {
   }, []);
   return (
     <Fragment>
-      <HeaderBarTemplate title={'Key Players'} />
+      <span className='header-key-players'>
+        <HeaderBarTemplate title={'Key Players'} />
+      </span>
+      <span className='header-home'>
+        <HeaderBarTemplate className='header-key-players' title={'Home'} />
+      </span>
       {alertMessage && <div className='alert-message'> {alertMessage} </div>}
       <div className='key-players'>
         <div className='key-players-home'>
@@ -51,6 +56,9 @@ const Index = () => {
             <Player player={player} />
           ))}
         </div>
+        <span className='header-away'>
+          <HeaderBarTemplate className='header-key-players' title={'Away'} />
+        </span>
         <div className='key-players-visiting'>
           {visiting.map((player) => (
             <Player player={player} />
