@@ -75,8 +75,11 @@ https://data.nba.com/data/v2015/json/mobile_teams/nba/2019/teams/trail_blazers_s
 
 ### <u>API for game recap</u>
 
-`https://api.nba.net/2/blazers/article/?games=0011900023&freeform=recap`
-_--- must use this header to use this api call ---_
+```
+https://api.nba.net/2/blazers/article/?games=0011900023&freeform=recap
+```
+
+**_must use this header to use this api call_**
 
 ```
 headers: {
