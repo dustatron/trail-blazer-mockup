@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import NewsItem from './NewsItem';
 import pageheaderbar from '../../../media/pageheaderbar.png';
 import '../../../scss/components/_news-feed.scss';
@@ -36,14 +36,18 @@ const Index = () => {
       {alertMessage && (
         <div className='news-feed-alert-message'> {alertMessage} </div>
       )}
-      {feedData.map(({ nid, url, title, teaser, thumbnail }) => (
-        <NewsItem
-          key={nid}
-          img={thumbnail}
-          title={title}
-          url={url}
-          teaser={teaser}
-        />
+      {feedData.map(({ nid, url, title, teaser, thumbnail }, i) => (
+        <Fragment>
+          {i < 4 && (
+            <NewsItem
+              key={nid}
+              img={thumbnail}
+              title={title}
+              url={url}
+              teaser={teaser}
+            />
+          )}
+        </Fragment>
       ))}
     </div>
   );

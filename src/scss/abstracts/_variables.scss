@@ -1,13 +1,14 @@
 /* BASE COLORS */
-$blazers-red:#CC0000;
-$blazers-gold: #84754E;
+$blazers-red: #cc0000;
+$blazers-gold: #84754e;
 $black: #000;
 $gray: #999;
 $light-gray: #eee;
+$back-ground-gray: #fafafa;
 
 /* GRADIENTS */
-$gold-gradient: linear-gradient(to right, #84754E, #bda76f);
+$gold-gradient: linear-gradient(to right, #84754e, #bda76f);
 
 /* FONTS */
-$headlines: "UnitedSansCdBd", franklin-gothic-urw !important;
-$content: "Helvetica Neue",Helvetica,Arial,sans-serif;
+$headlines: 'UnitedSansCdBd', franklin-gothic-urw !important;
+$content: 'Helvetica Neue', Helvetica, Arial, sans-serif;
