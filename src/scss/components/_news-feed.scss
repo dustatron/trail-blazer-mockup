@@ -20,6 +20,13 @@
       margin-bottom: 1.5em;
     }
   }
+
+  &-alert-message {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bolder;
+    color: $blazers-red;
+  }
 }
 
 .news-item {

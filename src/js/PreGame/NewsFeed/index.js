@@ -6,6 +6,8 @@ import '../../../scss/components/_news-feed.scss';
 ///////  NEWS FEED INDEX //////
 const Index = () => {
   const [feedData, setFeed] = useState([]);
+  const [alertMessage, setAlertMessage] = useState(null);
+  const alertReadout = 'News feed failed to load. Enable Cores';
 
   const callApi = async () => {
     try {
@@ -14,6 +16,7 @@ const Index = () => {
         .then((data) => data.content);
       setFeed(response);
     } catch (error) {
+      setAlertMessage(alertReadout);
       console.error('News Feed API FAILED: ', error.message);
     }
   };
@@ -30,6 +33,9 @@ const Index = () => {
         </div>
         <img className='news-feed-header-bar' src={pageheaderbar} alt='' />
       </div>
+      {alertMessage && (
+        <div className='news-feed-alert-message'> {alertMessage} </div>
+      )}
       {feedData.map(({ nid, url, title, teaser, thumbnail }) => (
         <NewsItem
           key={nid}
