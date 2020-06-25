@@ -6,7 +6,7 @@
   width: 100%;
   margin-top: $med-pad;
   @include respond(tab-land) {
-    margin: auto;
+    margin: $med-pad auto;
     width: 95%;
   }
 }
