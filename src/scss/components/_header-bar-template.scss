@@ -7,11 +7,14 @@
     margin: auto;
     width: 95%;
   }
+  @include respond(tab-land) {
+    padding-top: 0.5em;
+  }
 
   &-title {
     margin: 0 0 0.5em $pad-left-title;
     @include respond(tab-port) {
-      margin: 0.5em 0;
+      margin: 1.4em 0 0.35åem 0;
     }
     h1 {
       font-size: 1.7em;
