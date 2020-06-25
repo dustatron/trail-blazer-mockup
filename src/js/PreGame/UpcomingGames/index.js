@@ -1,8 +1,11 @@
 import React, { Fragment, useState, useEffect } from 'react';
+// Components
 import HeaderBarTemplate from '../../Shared/HeaderBarTemplate';
 import GameBox from './GameBox';
 import MonthBar from './MonthBar';
+// Style
 import '../../../scss/components/_upcoming-games.scss';
+
 const Index = () => {
   // Local component state.
   const [alertMessage, setAlertMessage] = useState(null);
@@ -19,17 +22,35 @@ const Index = () => {
       )
         .then((response) => response.json())
         .then((data) => data.gscd.g);
-      setGameData(
-        response.reduce((obj, g) => {
-          const { gdte } = g;
-          const month = gdte.slice(0, 7);
 
+      // Sort Data by month
+      // Add keys to objects that are human readable
+      // Removes games where Portland is the visiting team.
+      const SortedResponse = response.reduce((obj, g) => {
+        const { gdte } = g;
+        const month = gdte.slice(0, 7);
+        const pruned = {
+          gameId: g.gid,
+          gameCode: g.gcode,
+          date: gdte,
+          dayNumber: gdte.split('-'),
+          hour: g.etm.split('T'),
+          city: g.ac,
+          state: g.as,
+          arena: g.an,
+          homeTeam: g.h,
+          visitorTeam: g.v,
+        };
+        if (pruned.visitorTeam.ta == 'POR') {
+          return { ...obj };
+        } else {
           return {
             ...obj,
-            [month]: obj[month] ? [...obj[month], g] : [g],
+            [month]: obj[month] ? [...obj[month], pruned] : [pruned],
           };
-        }, {})
-      );
+        }
+      }, {});
+      setGameData(SortedResponse);
     } catch (error) {
       setAlertMessage(alertReadout);
       console.error('News Feed API FAILED: ', error.message);
@@ -46,12 +67,14 @@ const Index = () => {
       {alertMessage && <div className='alert-message'>{alertMessage} </div>}
       <div className='upcoming-games'>
         {Object.entries(gameData).map((month) => (
-          <p>
+          <Fragment>
             {<MonthBar month={month[0]} />}
-            {month[1].map((game) => (
-              <GameBox game={game} />
-            ))}
-          </p>
+            <div className='game-box-container'>
+              {month[1].map((game) => (
+                <GameBox game={game} />
+              ))}
+            </div>
+          </Fragment>
         ))}
       </div>
     </Fragment>
