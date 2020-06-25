@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import generateBgGradient from './utils/generateBgGradient';
 
-export default class HeroImage extends Component {
+export default class Hero extends Component {
 	render() {
 		return (
 			<Fragment>

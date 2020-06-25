@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import HeroImage from './HeroImage';
+import './index.scss';
+import Hero from './Hero';
 
 ReactDOM.render(
-  <HeroImage
+  <Hero
     imageSrc="https://codetheweb.blog/assets/img/posts/full-image-hero/image.jpg"
     color="#555555"
     gradientDirection="to bottom right"
@@ -29,6 +29,8 @@ ReactDOM.render(
     </p>
     <button id="PrimaryButton">Primary</button>
     <button id="SecondaryButton">Secondary</button>
-  </HeroImage>,
+  </Hero>,
   document.getElementById("root")
 );
+
+export default Hero;
