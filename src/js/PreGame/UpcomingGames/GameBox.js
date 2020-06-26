@@ -23,11 +23,26 @@ const GameBox = ({ game }) => {
         />
       </div>
       <div className='game-box-details'>
-        <p>{visitorTeam.tn}</p>
-        <p>Date of game</p>
-        <p>Moda Center @ 7:00</p>
+        <div className='game-box-details-left'>
+          <div className='game-box-details-left-name'>
+            {visitorTeam.tc} {visitorTeam.tn}
+          </div>
+          <div className='game-box-details-left-date'>fri, feb 21</div>
+          <div className='game-box-details-left-when-n-where'>
+            Moda Center @ 7:00 pm
+          </div>
+        </div>
+        <div className='game-box-details-right'>
+          <div className='game-box-details-right-top'>As low as</div>
+          <div className='game-box-details-right-bottom'>
+            <sup>$</sup>35
+          </div>
+        </div>
       </div>
-      <div className='game-box-buttons'></div>
+
+      <div className='game-box-bottom'>
+        view tickets <div className='game-box-bottom-arrow'> </div>{' '}
+      </div>
     </div>
   );
 };

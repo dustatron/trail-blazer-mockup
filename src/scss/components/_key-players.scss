@@ -70,9 +70,9 @@
 
   &-top {
     border-bottom: 1px solid $border;
-    font-family: $content;
-    font-weight: 900;
-    font-size: 0.6em;
+    font-family: $headlines;
+    font-weight: 500;
+    font-size: 0.8em;
     padding: 10px 20px;
     a:hover,
     a:visited,
@@ -104,12 +104,13 @@
       }
 
       &-number {
+        font-family: $headlines;
         font-weight: 900;
         font-size: 3em;
       }
       &-info {
-        margin-top: 10px;
-        font-size: 0.68em;
+        margin-top: 4px;
+        font-size: 0.75em;
         font-weight: 600;
         &-name {
           display: block;

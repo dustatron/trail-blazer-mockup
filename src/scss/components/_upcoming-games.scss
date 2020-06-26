@@ -11,8 +11,9 @@
   align-items: center;
   padding: 0.8em 0 0.8em 0;
   &-month {
-    font-size: 1.4em;
-    font-weight: 500;
+    font-family: $headlines;
+    font-size: 1.6em;
+    font-weight: 300;
     margin: 0 12px;
   }
 
@@ -30,6 +31,9 @@
   border: 2px solid $border;
   border-radius: 5px;
   margin: 0.2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &-container {
     display: flex;
@@ -45,9 +49,85 @@
   }
 
   &-details {
-    padding: 0 5px;
+    position: relative;
+
+    &-left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 5px 5px;
+      width: 50%;
+
+      &-name {
+        font-family: $headlines;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1em;
+      }
+      &-date {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 0.6em;
+      }
+      &-when-n-where {
+        font-size: 0.6em;
+        font-weight: 300;
+      }
+    }
+
+    &-right {
+      float: right;
+      width: 74px;
+
+      &-top {
+        background: #d1d1d1;
+        font-size: 0.5em;
+        font-weight: 200;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 3px 0;
+      }
+      &-bottom {
+        position: relative;
+        background: #f7f7f7;
+        padding: 5px 10px;
+        text-align: center;
+        color: $blazers-red;
+        font-weight: 900;
+        font-size: 1.3em;
+
+        // sup {
+        //   // display: inline-block;
+        //   // height: 100%;
+        //   // font-size: 0.5em;
+        //   // margin-right: -4px;
+        // }
+      }
+    }
   }
 
-  &-buttons {
+  &-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-arrow {
+      display: inline-block;
+      margin-left: 5px;
+      width: 0px;
+      height: 0px;
+      border-radius: 10px;
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-left: 4px solid $blazers-red;
+    }
+
+    color: $blazers-red;
+    font-family: $content;
+    font-weight: 900;
+    font-size: 0.65em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 13px 10px;
+    border-top: 1px solid $border;
   }
 }

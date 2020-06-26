@@ -1,5 +1,13 @@
+@font-face {
+  font-family: 'UnitedSansCdBd';
+  src: url('../../media/font/unitedsanscond-heavy.otf');
+}
+
 html,
 body {
+  // @font-face {
+  //   font-family: 'UnitedSansCdBd';
+  //   src: url('../../media/font/unitedsanscond-heavy.otf');
+  // }
   font-family: 'Helvetica neue', Arial, Helvetica, sans-serif;
-  // font-size: 62.5%;
 }

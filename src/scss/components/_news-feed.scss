@@ -47,18 +47,18 @@
     display: inline-block;
     width: 45%;
     height: 100%;
-    padding: 10px 18px;
+    padding: 10px 21px;
     @include respond(tab-land) {
       padding: 2px 10px;
       width: 50%;
     }
     &-title {
       text-transform: uppercase;
-      font-family: $content;
-      font-weight: 900;
-      font-size: 1.4em;
+      font-family: $headlines;
+      font-weight: 600;
+      font-size: 1.6em;
       line-height: 1.2;
-      letter-spacing: -0.5px;
+      letter-spacing: 0.5px;
       a:hover,
       a:visited,
       a:link,
@@ -76,7 +76,7 @@
       font-family: $content;
       font-weight: normal;
       margin-top: 0.5em;
-      font-size: 0.9em;
+      font-size: 0.8em;
       line-height: 1.2;
       @include respond(tab-land) {
         display: none;
