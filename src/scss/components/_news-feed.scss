@@ -5,8 +5,9 @@
   position: relative;
   width: 100%;
   margin-top: $med-pad;
+  margin-bottom: 1.2rem;
   @include respond(tab-land) {
-    margin: $med-pad auto;
+    margin: 2.2em 2% 1em 2%;
     width: 95%;
   }
 }
@@ -47,16 +48,17 @@
     display: inline-block;
     width: 45%;
     height: 100%;
-    padding: 10px 21px;
+    padding: 10px 0 10px 21px;
     @include respond(tab-land) {
       padding: 2px 10px;
       width: 50%;
     }
     &-title {
+      width: 100%;
       text-transform: uppercase;
       font-family: $headlines;
-      font-weight: 600;
-      font-size: 1.6em;
+      font-weight: 400;
+      font-size: 1.9em;
       line-height: 1.2;
       letter-spacing: 0.5px;
       a:hover,
@@ -67,8 +69,7 @@
         text-decoration: none;
       }
       @include respond(phone) {
-        font-weight: bolder;
-        font-size: 0.9em;
+        font-size: 1.05em;
         line-height: 1.2;
       }
     }
