@@ -24,12 +24,12 @@
 }
 
 .game-box {
-  height: 201px;
-  width: 209px;
+  height: 200px;
+  width: 208px;
   background: $white;
-  border: 1px solid $border;
+  border: 2px solid $border;
   border-radius: 5px;
-  margin: 6px;
+  margin: 0.2em;
 
   &-container {
     display: flex;
@@ -45,6 +45,7 @@
   }
 
   &-details {
+    padding: 0 5px;
   }
 
   &-buttons {

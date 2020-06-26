@@ -23,9 +23,9 @@ const GameBox = ({ game }) => {
         />
       </div>
       <div className='game-box-details'>
-        {date} ||
-        {homeTeam.tn} ||
-        {city}
+        <p>{visitorTeam.tn}</p>
+        <p>Date of game</p>
+        <p>Moda Center @ 7:00</p>
       </div>
       <div className='game-box-buttons'></div>
     </div>
