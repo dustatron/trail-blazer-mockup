@@ -1,0 +1,51 @@
+@import '../main.scss';
+
+.gameDescription {
+  font: $content;
+  padding: 15px;
+}
+
+.teams {
+  font: $headlines;
+  font-size: 45px;
+  padding: 15px;
+}
+
+button {
+    display: block;
+}
+
+.primaryButton {
+  background: #e03a3e;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  // display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 240px;
+}
+
+.secondaryButton {
+  // background: #e03a3e;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  // display: inline-block;
+  font: $content;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 240px;
+}
+
+.heroImage {
+  border-radius: 30px;
+}
