@@ -1,22 +1,20 @@
-# Blazers Pre-Post-Game 
+# Blazers Pre-Post-Game
 
-### A React build of the TailBlazers Pre, live, and Post game pages. 
+### A React build of the TailBlazers Pre, live, and Post game pages.
+
 ### _Created by, Alysia Petti, Alex Shreen, Dusty McCord. June, 2020_
 
 ## Work Log
 
-- Started building out the following components.
-  	- Hero
-  	- NewsFeed
-  	- KeyPlayers
+- Started building out the following components. - Hero - NewsFeed - KeyPlayers
 
 - Still need to find the correct API endpoint for KeyPlayer data.
 - Created a reusable Header Bar component in /js/Shared/HeaderBarTemplate.js
-  - pass `title={'title you want'}` and the component should render out a title bar. 
+  - pass `title={'title you want'}` and the component should render out a title bar.
 
 ## Links to Designs
 
-### Pre-Game 
+### Pre-Game
 
 [Desktop](https://david292023.invisionapp.com/public/share/TY14YQQQ9D#/screens/477788930/comments)
 
@@ -28,23 +26,22 @@
 
 [Mobile](https://david292023.invisionapp.com/public/share/DQ14YSRT6S#/screens/477789211)
 
-## API Endpoints  
+## API Endpoints
 
-Here is some reference code from the original code. 
-This code block seems to be making the bulk of all the api calls. 
+Here is some reference code from the original code.
+This code block seems to be making the bulk of all the api calls.
 
 **[Reference link to original code](./documentation/oldApiCode.md)**
 
 ### <u>Player data</u>
 
- **Note the ${gameId} at end of url** 
+**Note the \${gameId} at end of url**
 
 ```html
 https://data.nba.com/data/v2015/json/mobile_teams/nba/2019/scores/gamedetail/${GameId}_gamedetail.json
-
 ```
 
-*this is a working test url for postman*
+_this is a working test url for postman_
 
 ```
 https://data.nba.com/data/v2015/json/mobile_teams/nba/2019/scores/gamedetail/0011900023_gamedetail.json
@@ -56,10 +53,7 @@ This is an example of what this api returns. [Example Json Data](./documentation
 
 ```html
 https://www.nba.com/blazers/api/1.1/json
-
 ```
-
-
 
 ### <u>News Feed API with video</u>
 
@@ -87,7 +81,11 @@ headers: {
   },
 ```
 
+### Ticket Price
 
+```
+https://buyblazertickets.com/includes/jsonp.php?callback=?
+```
 
 ## Useful Links
 
@@ -128,7 +126,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Run npm install to get all needed modules
 
   ```shell
-  npm install	
+  npm install
   ```
 
 - Run production server with the following command:
@@ -194,8 +192,8 @@ Below is an overview of each folder/file's purpose and recommended management st
 |           |-- _alert-message.scss     # Styling for alert error messages
 |				|-- /components/
 |           |-- _app.scss          			# Styles for app component
-|           |-- _header-bar-template.scss            
-|           |-- _key-players.scss       
+|           |-- _header-bar-template.scss
+|           |-- _key-players.scss
 |           |-- _news-feed.scss
 |           |-- _pre-game-index.scss
 |				|-- main.scss										# Imports _mixins, _variables, _cssReset, _base, _alert-message

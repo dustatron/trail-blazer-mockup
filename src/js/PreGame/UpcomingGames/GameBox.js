@@ -35,13 +35,15 @@ const GameBox = ({ game }) => {
         <div className='game-box-details-right'>
           <div className='game-box-details-right-top'>As low as</div>
           <div className='game-box-details-right-bottom'>
-            <sup>$</sup>35
+            <div className='game-box-details-right-bottom-bling'>$</div>
+            <div className='game-box-details-right-bottom-copy'>35</div>
           </div>
         </div>
       </div>
 
       <div className='game-box-bottom'>
-        view tickets <div className='game-box-bottom-arrow'> </div>{' '}
+        <div className='game-box-bottom-copy'>view tickets</div>
+        <div className='game-box-bottom-arrow'> </div>
       </div>
     </div>
   );
