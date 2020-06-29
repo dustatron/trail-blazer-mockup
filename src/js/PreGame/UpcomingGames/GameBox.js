@@ -11,14 +11,13 @@ const GameBox = ({ game }) => {
     city,
     state,
     arena,
-    homeTeam,
     visitorTeam,
   } = game;
   return (
     <div className='game-box'>
       <div className='game-box-img'>
         <img
-          src={`https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_80x64/${visitorTeam.ta.toLowerCase()}.gif`}
+          src={`https://nba.com/blazers/sites/blazers/files/${visitorTeam.tn.toLowerCase()}.png`}
           alt='Team Logo'
         />
       </div>
@@ -29,7 +28,7 @@ const GameBox = ({ game }) => {
           </div>
           <div className='game-box-details-left-date'>fri, feb 21</div>
           <div className='game-box-details-left-when-n-where'>
-            Moda Center @ 7:00 pm
+            {arena} @ 7:00 pm
           </div>
         </div>
         <div className='game-box-details-right'>

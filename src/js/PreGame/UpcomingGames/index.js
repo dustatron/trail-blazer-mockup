@@ -17,16 +17,25 @@ const Index = () => {
   // Api Call for key user data.
   const callApi = async () => {
     try {
-      const response = await fetch(
+      const gameData = await fetch(
         'https://data.nba.com/data/v2015/json/mobile_teams/nba/2019/teams/trail_blazers_schedule_02.json'
       )
         .then((response) => response.json())
         .then((data) => data.gscd.g);
 
+      // const priceData = await fetch(
+      //   'https://buyblazertickets.com/includes/jsonp.php'
+      // )
+      //   .then((response) => {
+      //     console.log(response);
+      //     return response.json();
+      //   })
+      //   .then((data) => data.blazers);
+
       // Sort Data by month
       // Add keys to objects that are human readable
       // Removes games where Portland is the visiting team.
-      const SortedResponse = response.reduce((obj, g) => {
+      const SortedResponse = gameData.reduce((obj, g) => {
         const { gdte } = g;
         const month = gdte.slice(0, 7);
         const pruned = {
@@ -53,7 +62,7 @@ const Index = () => {
       setGameData(SortedResponse);
     } catch (error) {
       setAlertMessage(alertReadout);
-      console.error('News Feed API FAILED: ', error.message);
+      console.error('Upcoming games API FAILED: ', error.message);
     }
   };
 

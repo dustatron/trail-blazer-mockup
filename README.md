@@ -95,6 +95,10 @@ town should be three letter
 
 `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_80x64/${town}.gif`
 
+Higher quality
+
+`https://nba.com/blazers/sites/blazers/files/${visitorTeam.tn.toLowerCase()}.png`
+
 ## Get full body image
 
 player.id is a string of numbers
