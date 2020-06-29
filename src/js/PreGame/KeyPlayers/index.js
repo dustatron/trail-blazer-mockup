@@ -5,6 +5,7 @@ import Player from './Player';
 import '../../../scss/components/_key-players.scss';
 // Temp Data for mockup.
 import { tempData } from './tempData';
+import { v4 } from 'uuid';
 
 ///////  KEY PLAYER INDEX //////
 const Index = () => {
@@ -61,7 +62,7 @@ const Index = () => {
         </span>
         <div className='key-players-visiting'>
           {visiting.map((player) => (
-            <Player player={player} />
+            <Player player={player} key={v4()} />
           ))}
         </div>
       </div>

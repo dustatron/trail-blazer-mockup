@@ -3,6 +3,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import HeaderBarTemplate from '../../Shared/HeaderBarTemplate';
 import GameBox from './GameBox';
 import MonthBar from './MonthBar';
+import { v4 } from 'uuid';
 // Style
 import '../../../scss/components/_upcoming-games.scss';
 
@@ -76,11 +77,11 @@ const Index = () => {
       {alertMessage && <div className='alert-message'>{alertMessage} </div>}
       <div className='upcoming-games'>
         {Object.entries(gameData).map((month) => (
-          <Fragment>
+          <Fragment key={v4()}>
             {<MonthBar month={month[0]} />}
             <div className='game-box-container'>
               {month[1].map((game) => (
-                <GameBox game={game} />
+                <GameBox key={v4()} game={game} />
               ))}
             </div>
           </Fragment>
