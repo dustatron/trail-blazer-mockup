@@ -35,47 +35,45 @@
 .game-box {
   position: relative;
   height: 200px;
-  width: 208px;
+  width: 202px;
   background: $white;
   border: 2px solid $border;
   border-radius: 5px;
-  margin: 0.2em;
+  margin: 0.1em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
+
   @include respond(tab-port) {
     height: 338px;
     width: 326px;
   }
 
-  &-hot {
+  &-corner {
     position: absolute;
+    top: 0;
+    right: 0;
     height: 0;
     width: 0;
 
-    border-top: 40px solid transparent;
-    border-bottom: 40px solid transparent;
-    border-left: 40px solid $hot-red;
-    background-color: $hot-red;
+    &-icon {
+      position: absolute;
+      height: 10px;
+      top: -45px;
+      right: 9px;
+      font-size: 1.1em;
+      color: white;
+    }
+    &-hot {
+      border-top: 56px solid $hot-red;
+      border-left: 56px solid transparent;
+    }
 
-    transform: rotate(-45deg);
-    top: -26px;
-    right: -6px;
-  }
-  &-value {
-    position: absolute;
-    height: 0;
-    width: 0;
-
-    border-top: 40px solid transparent;
-    border-bottom: 40px solid transparent;
-    border-left: 40px solid $value-green;
-    background-color: $value-green;
-
-    transform: rotate(-45deg);
-    top: -26px;
-    right: -6px;
+    &-value {
+      border-top: 56px solid $value-green;
+      border-left: 56px solid transparent;
+    }
   }
 
   &-container {
@@ -108,7 +106,7 @@
       bottom: 0;
       left: 0;
       padding: 5px 5px;
-      width: 50%;
+      width: 60%;
 
       &-name {
         font-family: $headlines;
@@ -173,6 +171,14 @@
     text-align: center;
     padding: 13px 10px;
     border-top: 1px solid $border;
+
+    a:hover,
+    a:visited,
+    a:link,
+    a:active {
+      color: $blazers-red;
+      text-decoration: none;
+    }
     @include respond(tab-port) {
       padding: 21px 10px;
       font-size: 1em;

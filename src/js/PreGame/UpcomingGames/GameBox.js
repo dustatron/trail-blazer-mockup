@@ -3,27 +3,33 @@ import PropTypes from 'prop-types';
 
 const GameBox = ({ game }) => {
   const {
-    gameId,
-    gameCode,
-    wholeDate,
     dayNumber,
     day,
     time,
     month,
     price,
-    sold,
     nameShort,
     nameLong,
     value,
     hot,
-    giveaway,
     link,
-    dateIsTBD,
   } = game;
   return (
     <div className='game-box'>
-      {hot > 0 && <div className='game-box-hot'></div>}
-      {value > 0 && <div className='game-box-value'> </div>}
+      {hot > 0 && (
+        <div className='game-box-corner game-box-corner-hot'>
+          <div className='game-box-corner-icon'>
+            <i class='fas fa-burn'></i>
+          </div>
+        </div>
+      )}
+      {value > 0 && (
+        <div className='game-box-corner game-box-corner-value'>
+          <div className='game-box-corner-icon'>
+            <i class='fas fa-dollar-sign'></i>
+          </div>
+        </div>
+      )}
       <div className='game-box-img'>
         <img
           src={`https://nba.com/blazers/sites/blazers/files/${nameShort.toLowerCase()}.png`}
@@ -60,22 +66,23 @@ const GameBox = ({ game }) => {
   );
 };
 
-// GameBox.propTypes = {
-//   game: PropTypes.PropTypes.shape({
-//     gameId: PropTypes.string,
-//     gameCode: PropTypes.string,
-//     date: PropTypes.string,
-//     dayNumber: PropTypes.array,
-//     hour: PropTypes.array,
-//     visitorTeam: PropTypes.shape({
-//       tid: PropTypes.number,
-//       re: PropTypes.string,
-//       ta: PropTypes.string,
-//       tn: PropTypes.string,
-//       tc: PropTypes.string,
-//       s: PropTypes.string,
-//     }),
-//   }),
-// };
+GameBox.propTypes = {
+  gameId: PropTypes.string,
+  gameCode: PropTypes.string,
+  wholeDate: PropTypes.string,
+  dayNumber: PropTypes.string,
+  day: PropTypes.string,
+  time: PropTypes.number,
+  month: PropTypes.string,
+  price: PropTypes.array.isRequired,
+  sold: PropTypes.bool,
+  nameShort: PropTypes.string,
+  nameLong: PropTypes.string,
+  value: PropTypes.number.isRequired,
+  hot: PropTypes.number.isRequired,
+  giveaway: PropTypes.number,
+  link: PropTypes.string.isRequired,
+  dateIsTBD: PropTypes.bool,
+};
 
 export default GameBox;

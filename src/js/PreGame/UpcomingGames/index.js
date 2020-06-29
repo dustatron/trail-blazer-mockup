@@ -37,7 +37,6 @@ const Index = () => {
       // Add keys to objects that are human readable
       // Removes games where Portland is the visiting team.
       /*
-
         gameId,
         team name / short,
         team name with city,
