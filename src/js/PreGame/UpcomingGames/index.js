@@ -31,30 +31,73 @@ const Index = () => {
         .then((response) => {
           return response.json();
         })
-        .then((data) => console.log('JSON P', data.blazers));
+        .then((data) => data.blazers);
 
       // Sort Data by month
       // Add keys to objects that are human readable
       // Removes games where Portland is the visiting team.
-      const SortedResponse = gameData.reduce((obj, g) => {
-        const { gdte } = g;
-        const month = gdte.slice(0, 7);
+      /*
+
+        gameId,
+        team name / short,
+        team name with city,
+        day, month, day number,
+        Game time,
+        price,
+        ticket link,
+        hot,
+        value,
+        sold,
+      */
+      const SortedResponse = priceData.games.reduce((obj, game) => {
+        const {
+          gameNumber,
+          schedSort,
+          schedDay,
+          schedDate,
+          schedTime,
+          monthClass,
+          priceLow,
+          priceMid,
+          priceHigh,
+          sold,
+          opponentShort,
+          opponent,
+          giveaway,
+          value,
+          hot,
+          url,
+          dateTbd,
+        } = game;
+
         const pruned = {
-          gameId: g.gid,
-          gameCode: g.gcode,
-          date: gdte,
-          dayNumber: gdte.split('-'),
-          hour: g.etm.split('T'),
-          visitorTeam: g.v,
+          gameId: schedSort,
+          gameCode: gameNumber,
+          wholeDate: schedDate,
+          dayNumber: schedDate.split(' ')[1].substr(0, 2),
+          day: schedDay,
+          time: schedTime,
+          month: monthClass,
+          price: [priceLow, priceMid, priceHigh],
+          sold: sold,
+          nameShort: opponentShort,
+          nameLong: opponent,
+          value,
+          hot,
+          giveaway,
+          link: url,
+          dateIsTBD: dateTbd,
         };
-        if (pruned.visitorTeam.ta == 'POR') {
-          return { ...obj };
-        } else {
-          return {
-            ...obj,
-            [month]: obj[month] ? [...obj[month], pruned] : [pruned],
-          };
-        }
+
+        const currentMonth = schedDate.split(' ')[0];
+
+        const newObj = {
+          ...obj,
+          [currentMonth]: obj[currentMonth]
+            ? [...obj[currentMonth], pruned]
+            : [pruned],
+        };
+        return newObj;
       }, {});
       setGameData(SortedResponse);
     } catch (error) {
