@@ -19,14 +19,14 @@ const GameBox = ({ game }) => {
       {hot > 0 && (
         <div className='game-box-corner game-box-corner-hot'>
           <div className='game-box-corner-icon'>
-            <i class='fas fa-burn'></i>
+            <i className='fas fa-burn'></i>
           </div>
         </div>
       )}
       {value > 0 && (
         <div className='game-box-corner game-box-corner-value'>
           <div className='game-box-corner-icon'>
-            <i class='fas fa-dollar-sign'></i>
+            <i className='fas fa-dollar-sign'></i>
           </div>
         </div>
       )}
@@ -74,14 +74,14 @@ GameBox.propTypes = {
   day: PropTypes.string,
   time: PropTypes.number,
   month: PropTypes.string,
-  price: PropTypes.array.isRequired,
+  price: PropTypes.array,
   sold: PropTypes.bool,
   nameShort: PropTypes.string,
   nameLong: PropTypes.string,
-  value: PropTypes.number.isRequired,
-  hot: PropTypes.number.isRequired,
+  value: PropTypes.number,
+  hot: PropTypes.number,
   giveaway: PropTypes.number,
-  link: PropTypes.string.isRequired,
+  link: PropTypes.string,
   dateIsTBD: PropTypes.bool,
 };
 
