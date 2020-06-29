@@ -4,6 +4,7 @@ import HeaderBarTemplate from '../../Shared/HeaderBarTemplate';
 import GameBox from './GameBox';
 import MonthBar from './MonthBar';
 import { v4 } from 'uuid';
+import fetchJsonp from 'fetch-jsonp';
 // Style
 import '../../../scss/components/_upcoming-games.scss';
 
@@ -24,14 +25,13 @@ const Index = () => {
         .then((response) => response.json())
         .then((data) => data.gscd.g);
 
-      // const priceData = await fetch(
-      //   'https://buyblazertickets.com/includes/jsonp.php'
-      // )
-      //   .then((response) => {
-      //     console.log(response);
-      //     return response.json();
-      //   })
-      //   .then((data) => data.blazers);
+      const priceData = await fetchJsonp(
+        'https://buyblazertickets.com/includes/jsonp.php'
+      )
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => console.log('JSON P', data.blazers));
 
       // Sort Data by month
       // Add keys to objects that are human readable
@@ -45,10 +45,6 @@ const Index = () => {
           date: gdte,
           dayNumber: gdte.split('-'),
           hour: g.etm.split('T'),
-          city: g.ac,
-          state: g.as,
-          arena: g.an,
-          homeTeam: g.h,
           visitorTeam: g.v,
         };
         if (pruned.visitorTeam.ta == 'POR') {

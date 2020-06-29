@@ -55,17 +55,6 @@ GameBox.propTypes = {
     date: PropTypes.string,
     dayNumber: PropTypes.array,
     hour: PropTypes.array,
-    city: PropTypes.string,
-    state: PropTypes.string,
-    arena: PropTypes.string,
-    homeTeam: PropTypes.shape({
-      tid: PropTypes.number,
-      re: PropTypes.string,
-      ta: PropTypes.string,
-      tn: PropTypes.string,
-      tc: PropTypes.string,
-      s: PropTypes.string,
-    }),
     visitorTeam: PropTypes.shape({
       tid: PropTypes.number,
       re: PropTypes.string,
