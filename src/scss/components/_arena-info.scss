@@ -1,0 +1,29 @@
+.arena {
+  padding-top: 30px;
+  width: 93.5%;
+  margin: auto;
+  &-logo {
+    // height: 174px;
+    height: 10.8em;
+    width: 100%;
+    background-color: orange;
+  }
+  &-img {
+    // height: 400px;
+    height: 25em;
+    width: 100%;
+    background-color: yellow;
+  }
+  &-map {
+    // height: 241px;
+    height: 15em;
+    width: 100%;
+    background-color: green;
+  }
+  &-blurb {
+    // height: 256px;
+    height: 16em;
+    width: 100%;
+    background-color: salmon;
+  }
+}
