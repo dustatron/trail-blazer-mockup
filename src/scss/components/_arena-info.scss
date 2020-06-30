@@ -1,18 +1,36 @@
+@import '../main.scss';
 .arena {
   padding-top: 30px;
   width: 93.5%;
   margin: auto;
+  background-color: #fafafa;
+
   &-logo {
-    // height: 174px;
-    height: 10.8em;
+    position: relative;
+
+    text-align: center;
+    height: 12.8em;
     width: 100%;
-    background-color: orange;
+    img {
+      position: absolute;
+      width: 92%;
+      top: 28%;
+      left: 50%;
+      transform: translate(-51%, -50%);
+      z-index: 1;
+    }
   }
   &-img {
+    position: relative;
     // height: 400px;
     height: 25em;
     width: 100%;
-    background-color: yellow;
+    img {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
   }
   &-map {
     // height: 241px;
@@ -21,9 +39,33 @@
     background-color: green;
   }
   &-blurb {
-    // height: 256px;
+    position: relative;
+    margin: auto;
+    padding: 21px;
     height: 16em;
     width: 100%;
-    background-color: salmon;
+    &-headline {
+      width: 50%;
+      font-family: $headlines;
+      color: $blazers-red;
+      font-size: 2em;
+    }
+    &-content {
+      width: 50%;
+      margin-top: 1.1em;
+      font-size: 0.85em;
+    }
+    &-button {
+      margin: 15px 0;
+      background: #847550;
+      font-family: $content;
+      font-size: 0.8em;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: $white;
+      padding: 5px 20px;
+      border: 0;
+      border-radius: 2px;
+    }
   }
 }
