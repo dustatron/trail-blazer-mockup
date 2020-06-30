@@ -26,8 +26,8 @@ const index = () => {
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
         ut aliquip ex ea commodo consequat.
       </p>
-      <button id='PrimaryButton'>Primary</button>
-      <button id='SecondaryButton'>Secondary</button>
+      <button className='primaryButton'>Primary</button>
+      <button className='secondaryButton'>Secondary</button>
     </Hero>
   );
 };
