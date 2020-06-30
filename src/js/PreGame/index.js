@@ -20,8 +20,8 @@ const index = () => {
         <NewsFeed />
         <UpcomingGames />
         <ArenaInfo />
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 };
