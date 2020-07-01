@@ -1,5 +1,23 @@
 # List of needed api end points
 
+## github list of end points
+
+`https://github.com/seemethere/nba_py/wiki/stats.nba.com-Endpoint-Documentation`
+
+## data.nba.net api
+
+`http://data.nba.net/10s/prod/v1/today.json`
+
+## Full List of League Games
+
+`http://data.nba.com/data/10s/v2015/json/mobile_teams/nba/2019/league/00_full_schedule.json`
+
+[Readme on what the keys mean](https://github.com/rlabausa/nba-schedule-data)
+
+## Play by play data
+
+`http://data.nba.com/data/10s/v2015/json/mobile_teams/nba/2019/scores/pbp/0021900038_full_pbp.json`
+
 ## Player data
 
 `https://data.nba.com/data/v2015/json/mobile_teams/nba/2019/scores/gamedetail/0011900023_gamedetail.json`

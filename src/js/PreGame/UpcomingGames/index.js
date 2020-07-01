@@ -19,11 +19,11 @@ const Index = () => {
   // Api Call for key user data.
   const callApi = async () => {
     try {
-      const gameData = await fetch(
-        'https://data.nba.com/data/v2015/json/mobile_teams/nba/2019/teams/trail_blazers_schedule_02.json'
-      )
-        .then((response) => response.json())
-        .then((data) => data.gscd.g);
+      // const gameData = await fetch(
+      //   'https://data.nba.com/data/v2015/json/mobile_teams/nba/2019/teams/trail_blazers_schedule_02.json'
+      // )
+      //   .then((response) => response.json())
+      //   .then((data) => data.gscd.g);
 
       const priceData = await fetchJsonp(
         'https://buyblazertickets.com/includes/jsonp.php'

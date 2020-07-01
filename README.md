@@ -33,7 +33,10 @@ This code block seems to be making the bulk of all the api calls.
 
 **[Reference link to original code](./documentation/oldApiCode.md)**
 
-### <u>Player data</u>
+### <u>Player data || API endpoint</u>
+
+endpoint lists
+`https://github.com/seemethere/nba_py/wiki/stats.nba.com-Endpoint-Documentation`
 
 **Note the \${gameId} at end of url**
 

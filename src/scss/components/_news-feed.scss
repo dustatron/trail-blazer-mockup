@@ -6,6 +6,7 @@
   width: 100%;
   margin-top: $med-pad;
   margin-bottom: 1.2rem;
+
   @include respond(tab-land) {
     margin: 2.2em 2% 1em 2%;
     width: $phone-width;
@@ -16,6 +17,8 @@
   position: relative;
   height: 13em;
   width: 100%;
+
+  // overflow: hidden;
   &:not(:first-child) {
     margin-top: $new-spacer;
   }
@@ -61,6 +64,7 @@
       font-size: 1.9em;
       line-height: 1.2;
       letter-spacing: 0.5px;
+      text-overflow: ellipsis;
       a:hover,
       a:visited,
       a:link,
@@ -79,6 +83,7 @@
       margin-top: 0.5em;
       font-size: 0.8em;
       line-height: 1.2;
+
       @include respond(tab-land) {
         display: none;
       }

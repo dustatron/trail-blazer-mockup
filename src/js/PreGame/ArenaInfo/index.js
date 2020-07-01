@@ -41,7 +41,9 @@ const Index = () => {
             exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat.
           </div>
-          <button className='arena-blurb-button'>Learn More </button>
+          <a href='#'>
+            <button className='arena-blurb-button'>Learn More </button>
+          </a>
         </div>
       </div>
     </Fragment>
