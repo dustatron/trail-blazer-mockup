@@ -1,0 +1,120 @@
+@import '../main.scss';
+
+.red {
+background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 79%, rgba(0,0,0,1) 94%, rgba(0,0,0,1) 100%);
+width: 70%;
+color: white;
+padding: 35px 0px 50px 50px;
+}
+
+.black {
+    background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 4%, rgba(0,0,0,0) 12%), url("https://www.nba.com/images/cms/2018-01/lillard_drive.jpg?cw=1920&w=1994&x=5&ch=1080&h=1122&y=0");
+    background-size: 425px, 850px;
+    background-repeat: no-repeat;
+    background-color:black;
+    width: 30%;
+    border:15px solid black;
+    padding: 5%;
+}
+
+.flex-container {
+  
+  @media (min-width: 56.25em){
+    display: flex;  
+  }
+}
+
+
+.sidebar {
+  flex: 0 0 300px;
+}
+
+.teamLogos {
+  display: flex;
+}
+
+// .responsive {
+//   width: 40%;
+//   height: auto;
+// }
+
+.blazersLogo {
+  max-width: 30%;
+  height: auto;
+  padding: 5px 15px 5px 15px;
+}
+
+.awayLogo {
+    max-width: 30%;
+    padding: 0px 0px 0px 100px;
+    height: auto;
+}
+
+.teamNames {
+  display: flex;
+  h1 {
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 35px;
+  }
+
+  h2 {
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 15px 20px 5px 100px;
+  }
+}
+
+.blazersName {
+  padding: 5px 15px 5px 15px;
+}
+
+.awayName {
+  padding: 5px 15px 5px 100px;
+}
+
+
+
+button {
+  display: block;
+  border-radius: 5px;
+}
+
+.primaryButton {
+  background: #e03a3e;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 32px 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  // display: inline-block;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.secondaryButton {
+  font: $content;
+  color:green;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  padding: 15px 32px 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  // display: inline-block;
+  font: $content;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}
