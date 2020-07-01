@@ -1,0 +1,45 @@
+@import '../main.scss';
+
+.court {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  @include respond(tab-land) {
+    height: auto;
+  }
+
+  &-title {
+    display: none;
+    @include respond(tab-land) {
+      display: inline-block;
+      color: white;
+      font-family: $headlines;
+      text-align: center;
+      padding: 5px;
+      text-transform: uppercase;
+    }
+    &-home {
+      background: $blazers-red;
+    }
+    &-visitor {
+      background-color: $black;
+    }
+  }
+
+  &-layout {
+    position: relative;
+
+    &-img {
+      width: 100%;
+      stroke: 0;
+      content: url('../../media/court.png');
+      @include respond(phone) {
+        width: 100.7%;
+        margin: -1px;
+        content: url('../../media/court90.png');
+      }
+    }
+  }
+}

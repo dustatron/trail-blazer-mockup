@@ -1,0 +1,14 @@
+@import '../main.scss';
+
+.live-game {
+  position: relative;
+  width: 100%;
+  &-container {
+    max-width: 60em;
+    margin: auto;
+    background: $back-ground-gray;
+    @include respond(tab-land) {
+      max-width: 98%;
+    }
+  }
+}

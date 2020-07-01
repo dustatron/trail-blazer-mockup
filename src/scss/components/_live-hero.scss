@@ -1,0 +1,8 @@
+@import '../main.scss';
+.live-hero {
+  height: 528px;
+  background: $black;
+  @include respond(tab-port) {
+    height: 705;
+  }
+}

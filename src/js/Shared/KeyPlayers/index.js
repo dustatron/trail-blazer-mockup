@@ -8,7 +8,7 @@ import { tempData } from './tempData';
 import { v4 } from 'uuid';
 
 ///////  KEY PLAYER INDEX //////
-const Index = () => {
+const Index = ({ links }) => {
   // Local component state.
   const [alertMessage, setAlertMessage] = useState(null);
   const [playerData, setPlayerData] = useState({
@@ -45,7 +45,7 @@ const Index = () => {
   return (
     <Fragment>
       <span className='header-key-players'>
-        <HeaderBarTemplate title={'Key Players'} />
+        <HeaderBarTemplate title={'Key Players'} showLinks={links} />
       </span>
       <span className='header-home'>
         <HeaderBarTemplate className='header-key-players' title={'Home'} />

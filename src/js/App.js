@@ -4,13 +4,14 @@ import Test from './Test';
 
 import Hero from './PreGame/Hero';
 import CTA from './PreGame/CTA';
-import KeyPlayers from './PreGame/KeyPlayers';
+import KeyPlayers from './Shared/KeyPlayers';
 import NewsFeed from './PreGame/NewsFeed';
-import UpcomingGames from './PreGame/UpcomingGames';
+import UpcomingGames from './Shared/UpcomingGames';
 import ArenaInfo from './PreGame/ArenaInfo';
 import Court from './LiveGame/Court';
 import CTALive from './LiveGame/CTA';
-import HeroLive from './LiveGame/Hero';
+import HeroLive from './LiveGame/LiveHero';
+import LiveStats from './LiveGame/LiveStats';
 
 import SimpleLinks from './simpleLinks';
 
@@ -47,6 +48,7 @@ function App() {
             <Route path='/hero-live' component={HeroLive} />
             <Route path='/cta-live' component={CTALive} />
             <Route path='/court-live' component={Court} />
+            <Route path='/live-stats' component={LiveStats} />
 
             {/* ////// Shared \\\\\\ */}
             <Route path='/KeyPlayers' component={KeyPlayers} />
