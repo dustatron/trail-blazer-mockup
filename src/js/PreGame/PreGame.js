@@ -5,7 +5,7 @@ import KeyPlayers from './KeyPlayers';
 import NewsFeed from './NewsFeed';
 import UpcomingGames from './UpcomingGames';
 import ArenaInfo from './ArenaInfo';
-import Footer from './Footer';
+import Footer from '../Shared/Footer';
 
 import '../../scss/components/_pre-game-index.scss';
 
