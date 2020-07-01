@@ -10,6 +10,9 @@
   a:active {
     text-decoration: none;
   }
+  @include respond(tab-port) {
+    height: 80em;
+  }
   @include respond(phone) {
     height: 47.6em;
     padding-top: 1em;
