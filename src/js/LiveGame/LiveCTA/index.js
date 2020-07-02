@@ -15,9 +15,9 @@ const index = () => {
         <div className='live-cta-team-name'>Blazers</div>
       </div>
       <div className='live-cta-score'>
-        <div className='live-cta-score-title'>LIVE SCORE</div>
+        <div className='live-cta-score-copy'>LIVE SCORE</div>
         <div className='live-cta-score-the-score'>33 - 27</div>
-        <div className='live-cta-score-quarter'>Q2</div>
+        <div className='live-cta-score-copy'>Q2</div>
       </div>
       {/* /////// Visting Team \\\\\\ */}
       <div className='live-cta-team'>

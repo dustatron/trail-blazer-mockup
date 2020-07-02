@@ -13,13 +13,52 @@
   opacity: 0.88;
   @include respond(phone) {
     position: fixed;
+    width: 98%;
+    left: 1%;
   }
 
   &-team {
+    position: relative;
     padding: 16px 0;
+    width: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-img {
+      text-align: center;
+      height: 70%;
+      width: auto;
+      margin-bottom: 5px;
+      img {
+        height: 100%;
+      }
+    }
+    &-name {
+      font-family: $headlines;
+      font-size: 2em;
+      text-align: center;
+    }
   }
   &-score {
     padding: 16px 0;
     margin: 0 100px;
+    width: 120px;
+    text-align: center;
+    @include respond(phone) {
+      margin: 0 20px;
+      // width: 250px;
+    }
+    &-copy {
+      font-weight: bolder;
+      font-size: 0.9em;
+    }
+    &-the-score {
+      font-family: $headlines;
+      font-size: 3em;
+      margin: 15px 0;
+      @include respond(phone) {
+        font-size: 3em;
+      }
+    }
   }
 }
