@@ -9,7 +9,7 @@ import NewsFeed from './PreGame/NewsFeed';
 import UpcomingGames from './Shared/UpcomingGames';
 import ArenaInfo from './PreGame/ArenaInfo';
 import Court from './LiveGame/Court';
-import CTALive from './LiveGame/CTA';
+import CTALive from './LiveGame/LiveCTA';
 import HeroLive from './LiveGame/LiveHero';
 import LiveStats from './LiveGame/LiveStats';
 
