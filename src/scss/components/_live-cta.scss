@@ -1,0 +1,25 @@
+@import '../main.scss';
+.live-cta {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  color: $white;
+  background: $black;
+  height: 135px;
+  opacity: 0.88;
+  @include respond(phone) {
+    position: fixed;
+  }
+
+  &-team {
+    padding: 16px 0;
+  }
+  &-score {
+    padding: 16px 0;
+    margin: 0 100px;
+  }
+}
