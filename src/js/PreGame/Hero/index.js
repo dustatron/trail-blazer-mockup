@@ -15,11 +15,14 @@ const index = () => {
       </div>
       <div className="teamNames">
         <h1 className="blazersName">Blazers</h1>
-        <h2>VS</h2>
+        <h2 className="vs">VS</h2>
         <h1 className="awayName">Pelicans</h1>
       </div>
+      <div className="gameDate">
+        <h2>Moda Center - Friday, Feb 21</h2>
+      </div>
       <div className="gameDescription">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt turpis at ligula dictum, eu lobortis justo rutrum. Integer a ex magna. Aenean vel tristique dui, eget aliquet elit. Nulla eleifend tincidunt mattis. Morbi eget ante in sapien lobortis maximus a a nisi. In hac habitasse platea dictumst. Nulla eu.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet.</p>
       </div>
       <div className="buttons">
         <button className="primaryButton" type="button">Primary</button>

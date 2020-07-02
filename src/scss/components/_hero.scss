@@ -1,21 +1,29 @@
 @import '../main.scss';
 
-.red {
-background: rgb(0,0,0);
-background: linear-gradient(90deg, rgba(0,0,0,1) 79%, rgba(0,0,0,1) 94%, rgba(0,0,0,1) 100%);
-width: 70%;
-color: white;
-padding: 35px 0px 50px 50px;
+.flex-container {
+  width: 938px;
+  height: 440px;
+  z-index: 1;
 }
 
 .black {
-    background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 4%, rgba(0,0,0,0) 12%), url("https://www.nba.com/images/cms/2018-01/lillard_drive.jpg?cw=1920&w=1994&x=5&ch=1080&h=1122&y=0");
+    background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 15%), url("https://www.nba.com/images/cms/2018-01/lillard_drive.jpg?cw=1920&w=1994&x=5&ch=1080&h=1122&y=0");
     background-size: 425px, 850px;
     background-repeat: no-repeat;
     background-color:black;
-    width: 30%;
+    width: 581px;
     border:15px solid black;
     padding: 5%;
+    z-index: 2;
+}
+
+.red {
+width: 306px;
+background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 79%, rgba(0,0,0,1) 94%, rgba(0,0,0,1) 100%);
+color: white;
+z-index: 3;
+// padding: 35px 0px 50px 50px;
 }
 
 .flex-container {
@@ -40,15 +48,17 @@ padding: 35px 0px 50px 50px;
 // }
 
 .blazersLogo {
-  max-width: 30%;
-  height: auto;
-  padding: 5px 15px 5px 15px;
+  height: 66px;
+  margin-left:70px;
+  margin-right:55px;
+  margin-top:43px;
+  // margin-bottom: 5px;
 }
 
 .awayLogo {
-    max-width: 30%;
-    padding: 0px 0px 0px 100px;
-    height: auto;
+    height: 120px;
+    margin-left:45px;
+    margin-top: 15px;
 }
 
 .teamNames {
@@ -57,29 +67,38 @@ padding: 35px 0px 50px 50px;
   font-family: Arial;
   font-weight: bold;
   font-size: 35px;
+  width: 249px;
   }
 
   h2 {
   font-family: Arial;
   font-weight: bold;
-  font-size: 20px;
-  padding: 15px 20px 5px 100px;
+  font-size: 18px;
   }
 }
 
 .blazersName {
-  padding: 5px 15px 5px 15px;
+  margin-left: 60px;
+  margin-right: 14px;
+  margin-bottom: 21px;
+}
+
+.vs {
+    margin-top: 10px;
 }
 
 .awayName {
-  padding: 5px 15px 5px 100px;
+  margin-left:12px; 
+  margin-right:55px;
+    margin-bottom: 21px;
+
+  // margin-top: 8px; 
 }
-
-
 
 button {
   display: block;
   border-radius: 5px;
+  margin-left: 60px;
 }
 
 .primaryButton {
@@ -87,17 +106,18 @@ button {
   border: none;
   border-radius: 5px;
   color: white;
-  padding: 15px 32px 15px 15px;
+  // padding: 15px 32px 15px 15px;
   text-align: center;
   text-decoration: none;
   // display: inline-block;
   font-size: 25px;
   font-weight: bold;
-  margin: 4px 2px;
+  // margin: 4px 2px;
   cursor: pointer;
-  width: 100%;
-  margin-top: 25px;
+  width: 240px;
+  height: 37px;
   margin-bottom: 15px;
+  margin-top: 24px;
 }
 
 .secondaryButton {
@@ -106,15 +126,33 @@ button {
   border: none;
   border-radius: 5px;
   color: black;
-  padding: 15px 32px 15px 15px;
+  // padding: 15px 32px 15px 15px;
   text-align: center;
   text-decoration: none;
   // display: inline-block;
   font: $content;
   font-size: 25px;
   font-weight: bold;
-  margin: 4px 2px;
+  margin-top:18px;
+  margin-bottom:53px;
   cursor: pointer;
-  width: 100%;
-  margin-top: 20px;
+  width: 240px;
+  height: 37px;
+  // margin-top: 25px;
+}
+
+.gameDescription {
+  height: 72px;
+  width: 298px;
+  margin-left: 60px;
+  margin-right: 0px;
+  font: $content;
+  font-size: 13px;
+}
+
+.gameDate {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 60px;
+  margin-bottom: 20px;
 }
