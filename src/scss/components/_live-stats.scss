@@ -30,9 +30,11 @@
       font-weight: 200;
     }
     &-sub-title {
-      font-weight: 400;
+      color: $gray;
+      font-weight: 600;
       text-transform: uppercase;
-      font-size: 0.8em;
+      font-size: 0.7em;
+      margin: 1px 0 15px 0;
     }
     &-statistics {
       width: 31.6%;
@@ -48,8 +50,29 @@
       &-box {
         border: 1px solid $border;
         background-color: white;
-        height: 100px;
-        padding: 5px;
+      }
+      &-list-item {
+        font-weight: 800;
+        border-bottom: 1px solid $border;
+        padding: 17px 0;
+        &-left {
+          padding-left: 8px;
+          &-title {
+            font-size: 0.6em;
+          }
+          &-name {
+            font-size: 0.8em;
+            color: $blazers-red;
+          }
+        }
+        &-right {
+          padding-right: 8px;
+          font-size: 1.5em;
+        }
+        &-row {
+          display: flex;
+          justify-content: space-between;
+        }
       }
     }
     &-win-n-lose {
@@ -62,4 +85,10 @@
       }
     }
   }
+}
+.end-title {
+  margin-top: 10px;
+  color: $gray;
+  font-weight: 500;
+  font-size: 0.6em;
 }

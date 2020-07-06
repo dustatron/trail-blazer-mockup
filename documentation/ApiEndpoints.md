@@ -1,5 +1,9 @@
 # List of needed api end points
 
+## Team Leaders
+
+`https://data.nba.com/data/v2015/json/mobile_teams/nba/2019/teams/statistics/trail_blazers/leaders_02.json`
+
 ## github list of end points
 
 `https://github.com/seemethere/nba_py/wiki/stats.nba.com-Endpoint-Documentation`
