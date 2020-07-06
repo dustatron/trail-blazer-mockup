@@ -1,0 +1,62 @@
+@import '../main.scss';
+.stats {
+  margin: 1.6em auto;
+  width: 89%;
+  &-box-scores {
+    &-title {
+      font-family: $headlines;
+      font-size: 1.3em;
+      text-transform: uppercase;
+    }
+    &-card {
+      border: 1px solid $border;
+      border-radius: 5px;
+      padding: 10px;
+      background: $white;
+      height: 100px;
+    }
+  }
+  &-team {
+    margin-top: 2.8em;
+    display: flex;
+    justify-content: space-between;
+
+    &-title {
+      font-family: $headlines;
+      text-transform: uppercase;
+      font-size: 1.3em;
+    }
+    &-sub-title {
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 0.8em;
+    }
+    &-statistics {
+      width: 31.6%;
+      &-box {
+        border: 1px solid $border;
+        background-color: white;
+        height: 100px;
+        padding: 5px;
+      }
+    }
+    &-leaders {
+      width: 31.6%;
+      &-box {
+        border: 1px solid $border;
+        background-color: white;
+        height: 100px;
+        padding: 5px;
+      }
+    }
+    &-win-n-lose {
+      width: 31.6%;
+      &-box {
+        border: 1px solid $border;
+        background-color: white;
+        height: 100px;
+        padding: 5px;
+      }
+    }
+  }
+}

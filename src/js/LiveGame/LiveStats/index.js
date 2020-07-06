@@ -1,23 +1,37 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import HeaderBarTemplate from '../../Shared/HeaderBarTemplate';
+import '../../../scss/components/_live-stats.scss';
 
 ///// Live Stats \\\\\\
 const Index = () => {
   return (
-    <div>
+    <Fragment>
       <HeaderBarTemplate title={'live stats'} showLinks={true} />
-      <div
-        style={{
-          color: 'red',
-          padding: '20%',
-          fontSize: '2em',
-          height: '2em',
-          fontWeight: '900',
-          textAlign: 'center',
-        }}>
-        Live Stats Are COMING SOON...
+      <div className='stats'>
+        <div className='stats-box-scores'>
+          <div className='stats-box-scores-title'>Box Scores</div>
+          <div className='stats-box-scores-card'>Card here</div>
+        </div>
+        {/* End Box Scores   */}
+        <div className='stats-team'>
+          <div className='stats-team-statistics'>
+            <div className='stats-team-title'>Team Statistics</div>
+            <div className='stats-team-sub-title'>2019-20 Regular season</div>
+            <div className='stats-team-statistics-box'>stats</div>
+          </div>
+          <div className='stats-team-leaders'>
+            <div className='stats-team-title'>TEAM LEADERS</div>
+            <div className='stats-team-sub-title'>2019-20 Regular season</div>
+            <div className='stats-team-leaders-box'>stats</div>
+          </div>
+          <div className='stats-team-win-n-lose'>
+            <div className='stats-team-title'>Wins VS Losses</div>
+            <div className='stats-team-sub-title'>2019-20 Regular season</div>
+            <div className='stats-team-win-n-lose-box'>stats</div>
+          </div>
+        </div>
       </div>
-    </div>
+    </Fragment>
   );
 };
 
