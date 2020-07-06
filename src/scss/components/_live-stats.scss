@@ -22,6 +22,9 @@
     margin-top: 2.8em;
     display: flex;
     justify-content: space-between;
+    @include respond(tab-port) {
+      display: block;
+    }
 
     &-title {
       font-family: $headlines;
@@ -38,15 +41,44 @@
     }
     &-statistics {
       width: 31.6%;
+      @include respond(tab-port) {
+        width: 100%;
+      }
       &-box {
+        border-radius: 3px;
         border: 1px solid $border;
         background-color: white;
-        height: 100px;
-        padding: 5px;
+      }
+      &-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 6px;
+        font-weight: 800;
+        font-size: 0.65em;
+        &:not(:last-child) {
+          border-bottom: 1px solid $border;
+        }
+        &-left {
+          &-title {
+          }
+          &-number {
+            padding: 0 5px;
+            color: $blazers-red;
+          }
+          &-overall {
+            font-size: 0.8em;
+            color: $gray;
+          }
+        }
+        &-right {
+        }
       }
     }
     &-leaders {
       width: 31.6%;
+      @include respond(tab-port) {
+        width: 100%;
+      }
       &-box {
         border: 1px solid $border;
         background-color: white;
@@ -77,6 +109,9 @@
     }
     &-win-n-lose {
       width: 31.6%;
+      @include respond(tab-port) {
+        width: 100%;
+      }
       &-box {
         border: 1px solid $border;
         background-color: white;
