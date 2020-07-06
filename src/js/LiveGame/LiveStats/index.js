@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import HeaderBarTemplate from '../../Shared/HeaderBarTemplate';
 import TeamLeaders from './TeamLeaders';
 import TeamStatistics from './TeamStatistics';
+import WinsVLosses from './WinsVLosses';
 
 import '../../../scss/components/_live-stats.scss';
 
@@ -32,7 +33,7 @@ const Index = () => {
           <div className='stats-team-win-n-lose'>
             <div className='stats-team-title'>Wins VS Losses</div>
             <div className='stats-team-sub-title'>2019-20 Regular season</div>
-            <div className='stats-team-win-n-lose-box'>stats</div>
+            <WinsVLosses />
           </div>
         </div>
       </div>

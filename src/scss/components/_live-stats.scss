@@ -115,8 +115,22 @@
       &-box {
         border: 1px solid $border;
         background-color: white;
-        height: 100px;
         padding: 5px;
+
+        &-top {
+          display: flex;
+          justify-content: flex-start;
+          div {
+            width: 50%;
+            font-family: $headlines;
+            text-transform: uppercase;
+            font-size: 1.9em;
+            padding: 10px;
+            &:last-of-type {
+              border-left: 1px solid $border;
+            }
+          }
+        }
       }
     }
   }
