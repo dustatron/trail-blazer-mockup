@@ -5,6 +5,8 @@
   @include respond(tab-land) {
     margin: auto;
     width: 93.5%;
+  }
+  @include respond(phone) {
     padding: 0em;
   }
   &-top {
@@ -48,13 +50,15 @@
       padding-right: 0;
     }
     li {
-      padding-left: 5px;
+      padding-left: 10px;
       display: inline-block;
       font-family: $headlines;
       text-transform: uppercase;
-      font-size: 0.8em;
+      font-size: 1em;
       @include respond(tab-port) {
         font-size: 1em;
+        font-size: 0.88em;
+        padding-left: 10px;
       }
       a:hover,
       a:visited,
