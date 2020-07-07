@@ -13,13 +13,13 @@ const HeaderBarTemplate = ({ title, showLinks }) => {
         {showLinks && (
           <ul className='header-bar-template-links'>
             <li>
-              <a href='#'>Team Stats</a>
+              <a href='https://www.nba.com/blazers/stats/team'>Team Stats</a>
             </li>
             <li>
-              <a href='#'>Leaders</a>
+              <a href='https://www.nba.com/blazers/stats/leaders'>Leaders</a>
             </li>
             <li>
-              <a href='#'>Player Stats</a>
+              <a href='https://www.nba.com/blazers/stats'>Player Stats</a>
             </li>
           </ul>
         )}

@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
+import { v4 } from 'uuid';
 
 const TeamStatistics = () => {
   const [statData, setStatData] = useState([]);
@@ -33,7 +34,7 @@ const TeamStatistics = () => {
       {statData.length > 1 && (
         <div className='stats-team-statistics-box'>
           {statData.map((stat) => (
-            <div className='stats-team-statistics-item'>
+            <div key={v4()} className='stats-team-statistics-item'>
               <div className='stats-team-statistics-item-left'>
                 <span className='stats-team-statistics-item-left-title'>
                   {stat.title}:

@@ -3,6 +3,7 @@ import HeaderBarTemplate from '../../Shared/HeaderBarTemplate';
 import TeamLeaders from './TeamLeaders';
 import TeamStatistics from './TeamStatistics';
 import WinsVLosses from './WinsVLosses';
+import BoxScores from './BoxScores';
 
 import '../../../scss/components/_live-stats.scss';
 
@@ -14,7 +15,7 @@ const Index = () => {
       <div className='stats'>
         <div className='stats-box-scores'>
           <div className='stats-box-scores-title'>Box Scores</div>
-          <div className='stats-box-scores-card'>Card here</div>
+          <BoxScores />
         </div>
         {/* End Box Scores   */}
         <div className='stats-team'>
