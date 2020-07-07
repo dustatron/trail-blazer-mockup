@@ -7,7 +7,8 @@ const BoxScores = () => {
     callAPI();
   }, []);
 
-  const currentGameId = '0021900804'; // this would need to be updated based on active game
+  const currentGameId = '0021900804'; // away game
+  // const currentGameId = '0021900125'; // home game
 
   const callAPI = async () => {
     try {
@@ -15,11 +16,16 @@ const BoxScores = () => {
         `https://data.nba.com/data/v2015/json/mobile_teams/nba/2019/scores/gamedetail/${currentGameId}_gamedetail.json`
       )
         .then((res) => res.json())
-        .then((data) => data.g.vls.pstsg);
+        .then((data) => {
+          if (data.g.vls.ta === 'POR') {
+            return data.g.vls.pstsg;
+          }
+          return data.g.hls.pstsg;
+        });
 
       const activePlayers = response
         .reduce((returnArr, player) => {
-          if (player.status === 'A') {
+          if (player.min > 0) {
             return [...returnArr, player];
           }
           return [...returnArr];
