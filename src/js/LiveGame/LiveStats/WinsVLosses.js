@@ -1,4 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
+import WVLChart from './WVLChart';
 
 const WinsVLosses = () => {
   const [data, setData] = useState({});
@@ -18,13 +19,41 @@ const WinsVLosses = () => {
       {data.w && (
         <div className='stats-team-win-n-lose-box'>
           <div className='stats-team-win-n-lose-box-top'>
-            <div>{data.w} Wins</div>
-            <div>{data.l} Losses</div>
+            <div>
+              {data.w}
+              <span>Wins</span>
+            </div>
+            <div>
+              {data.l}
+              <span>Losses</span>
+            </div>
           </div>
-          <div> Home : {data.hr}</div>
-          <div> Away : {data.ar}</div>
-          <div> West : {data.cr}</div>
-          <div> East : {data.dr}</div>
+          <div className='stats-team-win-n-lose-box-bottom'>
+            <div className='stats-team-win-n-lose-box-bottom-item'>
+              <div className='stats-team-win-n-lose-box-bottom-item-title'>
+                HOME
+              </div>
+              <WVLChart stat={data.hr} />
+            </div>
+            <div className='stats-team-win-n-lose-box-bottom-item'>
+              <div className='stats-team-win-n-lose-box-bottom-item-title'>
+                Away
+              </div>
+              <WVLChart stat={data.ar} />
+            </div>
+            <div className='stats-team-win-n-lose-box-bottom-item'>
+              <div className='stats-team-win-n-lose-box-bottom-item-title'>
+                West
+              </div>
+              <WVLChart stat={data.cr} />
+            </div>
+            <div className='stats-team-win-n-lose-box-bottom-item'>
+              <div className='stats-team-win-n-lose-box-bottom-item-title'>
+                East
+              </div>
+              <WVLChart stat={data.dr} />
+            </div>
+          </div>
         </div>
       )}
     </Fragment>

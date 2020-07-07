@@ -1,0 +1,27 @@
+@import '../main.scss';
+.wvl-chart {
+  position: relative;
+  background-color: #4a4a4a;
+  width: 70%;
+  color: $white;
+  border-radius: 5px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1em;
+  overflow: hidden;
+  &-left {
+    background-color: $blazers-red;
+    padding: 4px 10px;
+    @include respond(tab-port) {
+      padding: 7px 10px;
+    }
+  }
+  &-right {
+    height: 100%;
+    padding: 4px 10px;
+    @include respond(tab-port) {
+      padding: 7px 10px;
+    }
+  }
+}
