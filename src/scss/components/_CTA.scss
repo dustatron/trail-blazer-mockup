@@ -7,10 +7,14 @@
       background: black;
       width: 422px;
       height: 77px;
+      // simplify
       border-top: 9px;
       border-left: 6px;
       border-right: 6px;
       border-bottom: 25px;
+      // trying to anchor CTA to the bottom of the DOM
+      bottom: 0;
+      position: absolute;
   }
 }
 
