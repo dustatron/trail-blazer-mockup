@@ -18,10 +18,6 @@ import SimpleLinks from './simpleLinks';
 import PreGame from './PreGame/PreGame.js';
 import LiveGame from './LiveGame/LiveGame.js';
 
-// Old Components
-import KeyPlayersStats from './zzGraveYard/keyPlayStats/KeyPlayersStats';
-import NewsFeedControl from './zzGraveYard/newsFeed/NewsFeedControl';
-import GameScore from './zzGraveYard/gameScore';
 import '../scss/components/_app.scss';
 
 //Styles
@@ -54,11 +50,6 @@ function App() {
             <Route path='/KeyPlayers' component={KeyPlayers} />
             <Route path='/UpcomingGames' component={UpcomingGames} />
           </div>
-
-          {/* ////////// Old Components ///////// */}
-          <Route path='/key-players-stats' component={KeyPlayersStats} />
-          <Route path='/game-score' component={GameScore} />
-          <Route path='/news-feed' component={NewsFeedControl} />
         </Switch>
       </Router>
     </Fragment>

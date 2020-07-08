@@ -1,5 +1,4 @@
-import React, { Fragment } from 'react';
-import CourtImg from '../../../media/court.png';
+import React from 'react';
 
 import '../../../scss/components/_court.scss';
 

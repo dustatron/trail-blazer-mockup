@@ -5,6 +5,12 @@ import GameBox from './GameBox';
 import MonthBar from './MonthBar';
 import { v4 } from 'uuid';
 import fetchJsonp from 'fetch-jsonp';
+// API
+// use this import if ApiSchedule is needed.
+// this is commented to avoid linting error.
+// import { ApiBuyTickets, ApiSchedule } from '../../Config/API_config';
+import { ApiBuyTickets } from '../../Config/API_config';
+
 // Style
 import '../../../scss/components/_upcoming-games.scss';
 
@@ -20,14 +26,12 @@ const Index = () => {
   const callApi = async () => {
     try {
       // const gameData = await fetch(
-      //   'https://data.nba.com/data/v2015/json/mobile_teams/nba/2019/teams/trail_blazers_schedule_02.json'
+      //   ApiSchedule();
       // )
       //   .then((response) => response.json())
       //   .then((data) => data.gscd.g);
 
-      const priceData = await fetchJsonp(
-        'https://buyblazertickets.com/includes/jsonp.php'
-      )
+      const priceData = await fetchJsonp(ApiBuyTickets())
         .then((response) => {
           return response.json();
         })

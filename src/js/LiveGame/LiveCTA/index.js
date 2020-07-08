@@ -1,5 +1,7 @@
 import React from 'react';
 import '../../../scss/components/_live-cta.scss';
+// API
+import { ApiImageLink } from '../../Config/API_config';
 
 const index = () => {
   return (
@@ -7,10 +9,7 @@ const index = () => {
       {/* ///// Home \\\\\\ */}
       <div className='live-cta-team'>
         <div className='live-cta-team-img'>
-          <img
-            src={`https://nba.com/blazers/sites/blazers/files/blazers.png`}
-            alt='Team Logo'
-          />
+          <img src={ApiImageLink('blazers')} alt='Team Logo' />
         </div>
         <div className='live-cta-team-name'>Blazers</div>
       </div>
@@ -22,10 +21,7 @@ const index = () => {
       {/* /////// Visting Team \\\\\\ */}
       <div className='live-cta-team'>
         <div className='live-cta-team-img'>
-          <img
-            src={`https://nba.com/blazers/sites/blazers/files/pelicans.png`}
-            alt='Team Logo'
-          />
+          <img src={ApiImageLink('pelicans')} alt='Team Logo' />
         </div>
         <div className='live-cta-team-name'>Pelicans</div>
       </div>

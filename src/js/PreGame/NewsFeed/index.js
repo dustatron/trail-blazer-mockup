@@ -3,6 +3,9 @@ import NewsItem from './NewsItem';
 import HeaderBarTemplate from '../../Shared/HeaderBarTemplate';
 import '../../../scss/components/_news-feed.scss';
 
+//API
+import { ApiNewsFeed } from '../../Config/API_config';
+
 ///////  NEWS FEED INDEX //////
 const Index = () => {
   const [feedData, setFeed] = useState([]);
@@ -12,7 +15,7 @@ const Index = () => {
 
   const callApi = async () => {
     try {
-      const response = await fetch('https://www.nba.com/blazers/api/1.1/json')
+      const response = await fetch(ApiNewsFeed())
         .then((response) => response.json())
         .then((data) => data.content);
       setFeed(response);

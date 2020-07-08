@@ -1,6 +1,10 @@
 import React, { Fragment, useEffect, useState } from 'react';
 
+// API
+import { ApiTeamLeaders } from '../../Config/API_config';
+
 const TeamLeaders = () => {
+  const [alertMessage, setAlertMessage] = useState(null);
   const [leadersData, setLeadersData] = useState({
     pts: null,
     ast: null,
@@ -14,16 +18,20 @@ const TeamLeaders = () => {
   }, []);
 
   const callAPI = async () => {
-    const response = await fetch(
-      'https://data.nba.com/data/v2015/json/mobile_teams/nba/2019/teams/statistics/trail_blazers/leaders_02.json'
-    )
-      .then((response) => response.json())
-      .then((data) => data.tle);
-    const { pts, ast, reb, blk } = response;
-    setLeadersData({ pts, ast, reb, blk });
+    try {
+      const response = await fetch(ApiTeamLeaders())
+        .then((response) => response.json())
+        .then((data) => data.tle);
+      const { pts, ast, reb, blk } = response;
+      setLeadersData({ pts, ast, reb, blk });
+    } catch (error) {
+      console.error(error.message);
+      setAlertMessage('Could not load data');
+    }
   };
   return (
     <Fragment>
+      {alertMessage && <div className='alert-message'> {alertMessage}</div>}
       {leadersData.pts !== null && (
         <div className='stats-team-leaders-box'>
           <div className='stats-team-leaders-list-item'>
@@ -33,7 +41,7 @@ const TeamLeaders = () => {
                   Points Per Game
                 </div>
                 <div className='stats-team-leaders-list-item-left-name'>
-                  {pts.fn + pts.ln}
+                  {pts.fn + ' ' + pts.ln}
                 </div>
               </div>
               <div className='stats-team-leaders-list-item-right'>
@@ -48,7 +56,7 @@ const TeamLeaders = () => {
                   Rebounds Per Game
                 </div>
                 <div className='stats-team-leaders-list-item-left-name'>
-                  {reb.fn + reb.ln}
+                  {reb.fn + ' ' + reb.ln}
                 </div>
               </div>
               <div className='stats-team-leaders-list-item-right'>
@@ -63,7 +71,7 @@ const TeamLeaders = () => {
                   Assists Per Game
                 </div>
                 <div className='stats-team-leaders-list-item-left-name'>
-                  {ast.fn + ast.ln}
+                  {ast.fn + ' ' + ast.ln}
                 </div>
               </div>
               <div className='stats-team-leaders-list-item-right'>
@@ -78,7 +86,7 @@ const TeamLeaders = () => {
                   Blocks Per Game
                 </div>
                 <div className='stats-team-leaders-list-item-left-name'>
-                  {blk.fn + blk.ln}
+                  {blk.fn + ' ' + blk.ln}
                 </div>
               </div>
               <div className='stats-team-leaders-list-item-right'>

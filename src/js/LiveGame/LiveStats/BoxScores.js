@@ -1,20 +1,22 @@
 import React, { Fragment, useEffect, useState } from 'react';
+// API
+import { ApiBoxScores } from '../../Config/API_config';
 
 const BoxScores = () => {
-  const [boxData, setBoxData] = useState([]);
   const [alertMessage, setAlertMessage] = useState(null);
+  const [boxData, setBoxData] = useState([]);
   useEffect(() => {
     callAPI();
   }, []);
 
+  ////////////  FOR TESTING  /////////////////////
+  // This should be replaced with a property.
   const currentGameId = '0021900804'; // away game
   // const currentGameId = '0021900125'; // home game
 
   const callAPI = async () => {
     try {
-      const response = await fetch(
-        `https://data.nba.com/data/v2015/json/mobile_teams/nba/2019/scores/gamedetail/${currentGameId}_gamedetail.json`
-      )
+      const response = await fetch(ApiBoxScores(currentGameId))
         .then((res) => res.json())
         .then((data) => {
           if (data.g.vls.ta === 'POR') {

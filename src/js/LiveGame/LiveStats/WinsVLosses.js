@@ -1,21 +1,29 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import WVLChart from './WVLChart';
 
+//API
+import { ApiWinLosses } from '../../Config/API_config';
+
 const WinsVLosses = () => {
+  const [alertMessage, setAlertMessage] = useState(null);
   const [data, setData] = useState({});
   useEffect(() => {
     callAPI();
   }, []);
   const callAPI = async () => {
-    const response = await fetch(
-      'https://data.nba.com/data/v2015/json/mobile_teams/nba/2019/00_standings.json'
-    )
-      .then((res) => res.json())
-      .then((data) => data.sta.co[1].di[0].t[3]); //crazy string to trail blazers data.
-    setData(response);
+    try {
+      const response = await fetch(ApiWinLosses())
+        .then((res) => res.json())
+        .then((data) => data.sta.co[1].di[0].t[3]); //crazy string to trail blazers data.
+      setData(response);
+    } catch (error) {
+      console.error(error.message);
+      setAlertMessage('Could Not Load Data');
+    }
   };
   return (
     <Fragment>
+      {alertMessage && <div className='alert-message'> {alertMessage}</div>}
       {data.w && (
         <div className='stats-team-win-n-lose-box'>
           <div className='stats-team-win-n-lose-box-top'>

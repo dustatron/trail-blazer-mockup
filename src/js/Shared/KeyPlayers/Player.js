@@ -9,7 +9,7 @@ const Player = ({ player }) => {
     <div className='player'>
       <div className='player-top'>
         <div className='player-top-points'>POINTS PER GAME</div>
-        <a href='#'>
+        <a href='/'>
           <div className='player-top-view-all'>VIEW ALL</div>
         </a>
       </div>
@@ -28,7 +28,7 @@ const Player = ({ player }) => {
         <div className='player-bottom-img'>
           <img
             src={`https://ak-static.cms.nba.com/wp-content/uploads/silos/nba/latest/440x700/${id}.png`}
-            alt='Player image'
+            alt='Player'
           />
         </div>
       </div>

@@ -1,7 +1,6 @@
 import React from 'react';
 
 // Components
-import LiveCTA from './LiveCTA';
 import Hero from './LiveHero';
 import Court from './Court';
 import LiveStats from './LiveStats';
