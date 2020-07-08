@@ -78,9 +78,7 @@ z-index: 3;
 }
 
 .blazersName {
-  margin-left: 60px;
-  margin-right: 14px;
-  margin-bottom: 21px;
+  margin: 0px 14px 21px 60px;
 }
 
 .vs {
@@ -88,11 +86,7 @@ z-index: 3;
 }
 
 .awayName {
-  margin-left:12px; 
-  margin-right:55px;
-    margin-bottom: 21px;
-
-  // margin-top: 8px; 
+  margin: 0px 55px 21px 12px;
 }
 
 button {
@@ -112,12 +106,12 @@ button {
   // display: inline-block;
   font-size: 25px;
   font-weight: bold;
-  // margin: 4px 2px;
   cursor: pointer;
   width: 240px;
   height: 37px;
-  margin-bottom: 15px;
-  margin-top: 24px;
+  // margin-bottom: 15px;
+  // margin-top: 24px;
+  margin: 20px 0px 15px 60px;
 }
 
 .secondaryButton {

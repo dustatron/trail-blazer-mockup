@@ -1,0 +1,44 @@
+@import '../main.scss';
+
+.buttons {
+  visibility: hidden;
+  @include respond(phone) {
+      visibility: visible;
+      background: black;
+      width: 422px;
+      height: 77px;
+      border-top: 9px;
+      border-left: 6px;
+      border-right: 6px;
+      border-bottom: 25px;
+  }
+}
+
+button {
+  @include respond(phone) {
+    visibility: visible;
+    display: inline;
+  }
+}
+  .primaryButton {
+    @include respond(phone){
+      border-radius: 5px;
+      //should be 176
+      width: 130px;
+      height: 42px;
+      background: #e03a3e;
+      margin-right: 12px;
+      font-size: 15px;
+    }
+  }
+  .secondaryButton {
+    @include respond(phone){
+      border-radius: 5px;
+      width: 130px;
+      height: 42px;
+      // background: white;
+      color: #e03a3e;
+      margin-left: 12px;
+      font-size: 15px;
+    }
+  }
