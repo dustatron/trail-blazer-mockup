@@ -25,7 +25,9 @@ const Index = ({ links }) => {
       const response = await fetch(ApiKeyPlayers())
         .then((response) => response.json())
         .then((data) => data.tle);
+      // eslint-disable-next-line
       const { min, pts, ast, reb, fgp, ftp, tpp, blk, stl, tov } = response;
+
       const prunedResponse = [
         // { ...min, title: 'Minutes', key: 'min' },
         { ...pts, title: 'Points', key: 'pts' },
