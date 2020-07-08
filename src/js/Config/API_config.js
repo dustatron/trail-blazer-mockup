@@ -3,7 +3,14 @@
 /////////////////////////////////////////////
 
 // --->  Key Players Component
-// No API yet
+export const ApiKeyPlayers = (
+  season = '2019',
+  seasonType = '02',
+  teamName = 'trail_blazers'
+) => {
+  // Document page 45
+  return `https://data.nba.com/data/v2015/json/mobile_teams/nba/${season}/teams/statistics/${teamName}/leaders_${seasonType}.json`;
+};
 
 // --->  Upcoming games Component
 /* 
