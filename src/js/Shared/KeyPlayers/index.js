@@ -61,7 +61,11 @@ const Index = ({ links }) => {
         <HeaderBarTemplate title={'Key Players'} showLinks={links} />
       </span>
       <span className='header-home'>
-        <HeaderBarTemplate className='header-key-players' title={'Home'} />
+        <HeaderBarTemplate
+          className='header-key-players'
+          title={'Home'}
+          showLinks={links}
+        />
       </span>
       {alertMessage && <div className='alert-message'> {alertMessage} </div>}
       <div className='key-players'>

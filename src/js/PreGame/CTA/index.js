@@ -1,10 +1,13 @@
 import React from 'react';
+import styled from 'styled-components';
+import '../../../scss/components/_CTA.scss';
 
 ///////  CTA INDEX //////
 const Index = () => {
   return (
-    <div>
-      <h1>Call To Action</h1>
+    <div className="buttons">
+        <button className="primaryButton" type="button">Primary</button>
+        <button className="secondaryButton" type="button">Secondary</button>
     </div>
   );
 };

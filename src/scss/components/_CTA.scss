@@ -1,0 +1,62 @@
+@import '../main.scss';
+
+.buttons {
+  // visibility: hidden;
+  display: none;
+  @include respond(phone) {
+    // visibility: visible;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background: $black;
+    opacity: 0.88;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 25px 0px;
+    // trying to anchor CTA to the bottom of the DOM
+  }
+}
+
+button {
+  @include respond(phone) {
+    visibility: visible;
+    display: inline;
+    // simplifying shared styles
+    // should be 176px
+    // width: 130px;
+    // height: 42px;
+    // border-radius: 5px;
+    // font-size: 15px;
+  }
+}
+.primaryButton {
+  @include respond(phone) {
+    font-size: 15px;
+    background: #e03a3e;
+    margin-right: 5px;
+
+    border-radius: 5px;
+    width: 176px;
+    height: 42px;
+    margin: 0px;
+    padding: 0px;
+  }
+}
+.secondaryButton {
+  @include respond(phone) {
+    // added styles below to button
+    border-radius: 5px;
+    width: 176px;
+    height: 42px;
+    margin: 0px;
+    padding: 0px;
+    // background: white;
+    font-size: 15px;
+    color: #e03a3e;
+    margin-left: 5px;
+  }
+}

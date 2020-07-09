@@ -5,6 +5,13 @@
   width: 100%;
   height: 440px;
   z-index: 1;
+  @include respond(tab-port) {
+    margin-bottom: 60px;
+  }
+  @include respond(phone) {
+    height: 600px;
+    margin-bottom: 100px;
+  }
 }
 
 .black {
@@ -17,15 +24,25 @@
   background-size: 425px, 850px;
   background-repeat: no-repeat;
   background-color: black;
-  width: 581px;
+  width: 100%;
   border: 15px solid black;
-  padding: 5%;
+  padding: 13%;
   z-index: 2;
+  @include respond(tab-port) {
+    height: 100%;
+    z-index: 0;
+    border: 0;
+    // background-attachment: fixed;
+    background-size: cover;
+    background-position: left;
+    @include absCenter;
+    // @include absCenter;
+  }
 }
 
 .red {
   // width: 306px;
-  width: 55.5%;
+  width: 40%;
   background: rgb(0, 0, 0);
   background: linear-gradient(
     90deg,
@@ -35,6 +52,20 @@
   );
   color: white;
   z-index: 3;
+  @include respond(tab-land) {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  @include respond(tab-port) {
+    top: 30px;
+
+    position: absolute;
+    background: none;
+    width: 100%;
+    margin: auto;
+  }
+
   // padding: 35px 0px 50px 50px;
 }
 
@@ -46,6 +77,9 @@
 
 .sidebar {
   flex: 0 0 300px;
+  @include respond(tab-port) {
+    // flex: none;
+  }
 }
 
 .teamLogos {
@@ -63,47 +97,65 @@
   margin-right: 55px;
   margin-top: 43px;
   // margin-bottom: 5px;
+  @include respond(tab-land) {
+    margin-left: 20%;
+  }
+  @include respond(tab-port) {
+    display: none;
+  }
 }
 
 .awayLogo {
   height: 120px;
   margin-left: 45px;
   margin-top: 15px;
+  @include respond(tab-land) {
+    margin-left: 18%;
+  }
+  @include respond(tab-port) {
+    display: none;
+  }
 }
 
 .teamNames {
   display: flex;
+  justify-content: center;
+  position: relative;
   h1 {
-    font-family: Arial;
+    text-align: center;
+    font-family: $headlines;
     font-weight: bold;
     font-size: 35px;
     width: 249px;
-  }
-
-  h2 {
-    font-family: Arial;
-    font-weight: bold;
-    font-size: 18px;
+    @include respond(tab-port) {
+      // width: 20%;
+      font-size: 2em;
+    }
   }
 }
 
-.blazersName {
-  margin-left: 60px;
-  margin-right: 14px;
-  margin-bottom: 21px;
-}
+// .blazersName {
+//   margin: 0px 14px 21px 60px;
+// }
 
 .vs {
+  font-family: $headlines;
+  font-size: 18px;
   margin-top: 10px;
+  @include respond(tab-port) {
+    // padding: 2% 28px;
+    font-size: 18px;
+
+    // padding-top: 1em;
+    // max-width: 20%;
+    // text-align: center;
+    // font-size: 0.8em !important;
+  }
 }
 
-.awayName {
-  margin-left: 12px;
-  margin-right: 55px;
-  margin-bottom: 21px;
-
-  // margin-top: 8px;
-}
+// .awayName {
+//   margin: 0px 55px 21px 12px;
+// }
 
 button {
   display: block;
@@ -122,12 +174,12 @@ button {
   // display: inline-block;
   font-size: 25px;
   font-weight: bold;
-  // margin: 4px 2px;
   cursor: pointer;
   width: 240px;
   height: 37px;
-  margin-bottom: 15px;
-  margin-top: 24px;
+  // margin-bottom: 15px;
+  // margin-top: 24px;
+  margin: 20px 0px 15px 60px;
 }
 
 .secondaryButton {
@@ -158,11 +210,25 @@ button {
   margin-right: 0px;
   font: $content;
   font-size: 13px;
+  @include respond(tab-port) {
+    display: none;
+  }
 }
 
 .gameDate {
-  font-size: 16px;
-  font-weight: bold;
-  margin-left: 60px;
-  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 15px 0 15px 60px;
+  font-weight: 500;
+  // margin-left: 60px;
+  // margin-bottom: 20px;
+  font-family: $content !important;
+  @include respond(tab-port) {
+    letter-spacing: 1.1px;
+    font-weight: 300;
+    padding-top: 19px;
+    font-size: 15px;
+    margin: auto;
+    text-align: center;
+  }
 }
