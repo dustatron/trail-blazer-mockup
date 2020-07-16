@@ -1,22 +1,22 @@
 import React, { Fragment } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Test from './Test';
+// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+// import Test from './Test';
 
-import Hero from './PreGame/Hero';
-import CTA from './PreGame/CTA';
-import KeyPlayers from './Shared/KeyPlayers';
-import NewsFeed from './PreGame/NewsFeed';
-import UpcomingGames from './Shared/UpcomingGames';
-import ArenaInfo from './PreGame/ArenaInfo';
-import Court from './LiveGame/Court';
-import CTALive from './LiveGame/LiveCTA';
-import HeroLive from './LiveGame/LiveHero';
-import LiveStats from './LiveGame/LiveStats';
+// import Hero from './PreGame/Hero';
+// import CTA from './PreGame/CTA';
+// import KeyPlayers from './Shared/KeyPlayers';
+// import NewsFeed from './PreGame/NewsFeed';
+// import UpcomingGames from './Shared/UpcomingGames';
+// import ArenaInfo from './PreGame/ArenaInfo';
+// import Court from './LiveGame/Court';
+// import CTALive from './LiveGame/LiveCTA';
+// import HeroLive from './LiveGame/LiveHero';
+// import LiveStats from './LiveGame/LiveStats';
 
-import SimpleLinks from './simpleLinks';
+// import SimpleLinks from './simpleLinks';
 
 import PreGame from './PreGame/PreGame.js';
-import LiveGame from './LiveGame/LiveGame.js';
+// import LiveGame from './LiveGame/LiveGame.js';
 
 import '../scss/components/_app.scss';
 

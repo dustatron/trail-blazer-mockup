@@ -9,7 +9,7 @@ export const ApiKeyPlayers = (
   teamName = 'trail_blazers'
 ) => {
   // Document page 45
-  return `https://data.nba.com/data/v2015/json/mobile_teams/nba/${season}/teams/statistics/${teamName}/leaders_${seasonType}.json`;
+  return `https://cors-anywhere.herokuapp.com/https://data.nba.com/data/v2015/json/mobile_teams/nba/${season}/teams/statistics/${teamName}/leaders_${seasonType}.json`;
 };
 
 // --->  Upcoming games Component

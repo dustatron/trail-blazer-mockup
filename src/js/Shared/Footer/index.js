@@ -4,15 +4,7 @@ import React, { Fragment } from 'react';
 const Index = () => {
   return (
     <Fragment>
-      <div style={{ height: '320px', background: '#333333' }}>
-        <h1
-          style={{
-            fontWeight: 'bolder',
-            textAlign: 'center',
-            color: 'white',
-            paddingTop: '2em',
-          }}></h1>
-      </div>
+      <div style={{ height: '320px', background: '#333333' }}></div>
       <div style={{ height: '320px', background: '#474747' }}></div>
     </Fragment>
   );
