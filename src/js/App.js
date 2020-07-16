@@ -15,8 +15,8 @@ import React, { Fragment } from 'react';
 
 // import SimpleLinks from './simpleLinks';
 
-import PreGame from './PreGame/PreGame.js';
-// import LiveGame from './LiveGame/LiveGame.js';
+// import PreGame from './PreGame/PreGame.js';
+import LiveGame from './LiveGame/LiveGame.js';
 
 import '../scss/components/_app.scss';
 
@@ -25,7 +25,7 @@ import '../scss/components/_app.scss';
 function App() {
   return (
     <Fragment>
-      <PreGame />
+      <LiveGame />
       {/* 
       <Router>
         <Switch>
