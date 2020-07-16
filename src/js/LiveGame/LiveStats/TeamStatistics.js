@@ -38,7 +38,7 @@ const TeamStatistics = () => {
   return (
     <Fragment>
       {alertMessage && <div className='alert-message'> {alertMessage}</div>}
-      {statData.length > 1 && (
+      {statData.length > 1 ? (
         <div className='stats-team-statistics-box'>
           {statData.map((stat) => (
             <div key={v4()} className='stats-team-statistics-item'>
@@ -61,6 +61,8 @@ const TeamStatistics = () => {
             </div>
           ))}
         </div>
+      ) : (
+        <div className='loading'> </div>
       )}
     </Fragment>
   );

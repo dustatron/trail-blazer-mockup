@@ -32,7 +32,7 @@ const TeamLeaders = () => {
   return (
     <Fragment>
       {alertMessage && <div className='alert-message'> {alertMessage}</div>}
-      {leadersData.pts !== null && (
+      {leadersData.pts !== null ? (
         <div className='stats-team-leaders-box'>
           <div className='stats-team-leaders-list-item'>
             <div className='stats-team-leaders-list-item-row'>
@@ -95,6 +95,8 @@ const TeamLeaders = () => {
             </div>
           </div>
         </div>
+      ) : (
+        <div className='loading'> </div>
       )}
     </Fragment>
   );

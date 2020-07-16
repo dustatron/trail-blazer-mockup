@@ -24,7 +24,7 @@ const WinsVLosses = () => {
   return (
     <Fragment>
       {alertMessage && <div className='alert-message'> {alertMessage}</div>}
-      {data.w && (
+      {data.w ? (
         <div className='stats-team-win-n-lose-box'>
           <div className='stats-team-win-n-lose-box-top'>
             <div>
@@ -63,6 +63,8 @@ const WinsVLosses = () => {
             </div>
           </div>
         </div>
+      ) : (
+        <div className='loading'> </div>
       )}
     </Fragment>
   );

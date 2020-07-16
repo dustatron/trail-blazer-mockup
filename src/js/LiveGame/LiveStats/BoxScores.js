@@ -24,7 +24,6 @@ const BoxScores = () => {
           }
           return data.g.hls.pstsg;
         });
-
       const activePlayers = response
         .reduce((returnArr, player) => {
           if (player.min > 0) {
@@ -35,7 +34,6 @@ const BoxScores = () => {
         .sort((a, b) => {
           return b.min - a.min;
         });
-
       setBoxData(activePlayers);
     } catch (err) {
       console.error(err.message);
@@ -66,58 +64,62 @@ const BoxScores = () => {
           <span className='stats-box-scores-card-title'>pts</span>
         </div>
         {alertMessage && <div className='alert-message'> {alertMessage} </div>}
-        {boxData.map(
-          ({
-            pid,
-            fn,
-            ln,
-            min,
-            fga,
-            fgm,
-            tpa,
-            tpm,
-            fta,
-            ftm,
-            pm,
-            oreb,
-            dreb,
-            reb,
-            ast,
-            stl,
-            blk,
-            tov,
-            pf,
-            pts,
-          }) => (
-            <div key={pid} className='stats-box-scores-card-stat-item'>
-              <span className='stats-box-scores-card-player-readout'>
-                <a
-                  href={`https://www.nba.com/blazers/roster/${fn.toLowerCase()}-${ln.toLowerCase()}/${pid}`}>
-                  {ln}
-                </a>
-              </span>
-              <span className='stats-box-scores-card-title'>{min}</span>
-              <span className='stats-box-scores-card-title'>
-                {fgm}-{fga}
-              </span>
-              <span className='stats-box-scores-card-title'>
-                {tpm}-{tpa}
-              </span>
-              <span className='stats-box-scores-card-title'>
-                {fta}-{ftm}
-              </span>
-              <span className='stats-box-scores-card-title'>{pm}</span>
-              <span className='stats-box-scores-card-title'>{oreb}</span>
-              <span className='stats-box-scores-card-title'>{dreb}</span>
-              <span className='stats-box-scores-card-title'>{reb}</span>
-              <span className='stats-box-scores-card-title'>{ast}</span>
-              <span className='stats-box-scores-card-title'>{stl}</span>
-              <span className='stats-box-scores-card-title'>{blk}</span>
-              <span className='stats-box-scores-card-title'>{tov}</span>
-              <span className='stats-box-scores-card-title'>{pf}</span>
-              <span className='stats-box-scores-card-title'>{pts}</span>
-            </div>
+        {boxData.length > 0 ? (
+          boxData.map(
+            ({
+              pid,
+              fn,
+              ln,
+              min,
+              fga,
+              fgm,
+              tpa,
+              tpm,
+              fta,
+              ftm,
+              pm,
+              oreb,
+              dreb,
+              reb,
+              ast,
+              stl,
+              blk,
+              tov,
+              pf,
+              pts,
+            }) => (
+              <div key={pid} className='stats-box-scores-card-stat-item'>
+                <span className='stats-box-scores-card-player-readout'>
+                  <a
+                    href={`https://www.nba.com/blazers/roster/${fn.toLowerCase()}-${ln.toLowerCase()}/${pid}`}>
+                    {ln}
+                  </a>
+                </span>
+                <span className='stats-box-scores-card-title'>{min}</span>
+                <span className='stats-box-scores-card-title'>
+                  {fgm}-{fga}
+                </span>
+                <span className='stats-box-scores-card-title'>
+                  {tpm}-{tpa}
+                </span>
+                <span className='stats-box-scores-card-title'>
+                  {fta}-{ftm}
+                </span>
+                <span className='stats-box-scores-card-title'>{pm}</span>
+                <span className='stats-box-scores-card-title'>{oreb}</span>
+                <span className='stats-box-scores-card-title'>{dreb}</span>
+                <span className='stats-box-scores-card-title'>{reb}</span>
+                <span className='stats-box-scores-card-title'>{ast}</span>
+                <span className='stats-box-scores-card-title'>{stl}</span>
+                <span className='stats-box-scores-card-title'>{blk}</span>
+                <span className='stats-box-scores-card-title'>{tov}</span>
+                <span className='stats-box-scores-card-title'>{pf}</span>
+                <span className='stats-box-scores-card-title'>{pts}</span>
+              </div>
+            )
           )
+        ) : (
+          <div className='loading'> </div>
         )}
       </div>
     </Fragment>
