@@ -11,9 +11,7 @@ const Index = () => {
             textAlign: 'center',
             color: 'white',
             paddingTop: '2em',
-          }}>
-          Footer - Provided by Drupal
-        </h1>
+          }}></h1>
       </div>
       <div style={{ height: '320px', background: '#474747' }}></div>
     </Fragment>

@@ -34,19 +34,23 @@ const Index = () => {
       <HeaderBarTemplate title={'news feed'} />
       <div className='news-feed'>
         {alertMessage && <div className='alert-message'> {alertMessage} </div>}
-        {feedData.map(({ nid, url, title, teaser, thumbnail }, i) => (
-          <Fragment>
-            {i < 4 && (
-              <NewsItem
-                key={nid}
-                img={thumbnail}
-                title={title}
-                url={url}
-                teaser={teaser}
-              />
-            )}
-          </Fragment>
-        ))}
+        {feedData.length > 0 || alertMessage ? (
+          feedData.map(({ nid, url, title, teaser, thumbnail }, i) => (
+            <Fragment>
+              {i < 4 && (
+                <NewsItem
+                  key={nid}
+                  img={thumbnail}
+                  title={title}
+                  url={url}
+                  teaser={teaser}
+                />
+              )}
+            </Fragment>
+          ))
+        ) : (
+          <div className='loading'> </div>
+        )}
       </div>
     </Fragment>
   );

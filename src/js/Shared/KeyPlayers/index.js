@@ -69,21 +69,11 @@ const Index = ({ links }) => {
       </span>
       {alertMessage && <div className='alert-message'> {alertMessage} </div>}
       <div className='key-players'>
-        {/* <div className='key-players-home'> */}
-        {playerData.map((player) => (
-          <Player key={v4()} thisPlayer={player} />
-        ))}
-        {/* </div> */}
-        {/* ////// away section ////// */}
-        {/* ////// Commented out for now ////// */}
-        {/* <span className='header-away'>
-          <HeaderBarTemplate className='header-key-players' title={'Away'} />
-        </span> */}
-        {/* <div className='key-players-visiting'>
-          {visiting.map((player) => (
-            <Player player={player} key={v4()} />
-          ))}
-        </div> */}
+        {playerData.length > 0 ? (
+          playerData.map((player) => <Player key={v4()} thisPlayer={player} />)
+        ) : (
+          <div className='loading'> </div>
+        )}
       </div>
     </Fragment>
   );

@@ -39,7 +39,10 @@ export const ApiSchedule = (
 // --->  News Feed Component
 // taken from old code. No Documentation.
 export const ApiNewsFeed = (team = 'blazers') => {
-  return `https://www.nba.com/${team}/api/1.1/json`;
+  return `https://cors-anywhere.herokuapp.com/https://www.nba.com/${team}/api/1.1/json`;
+
+  // will return cors error
+  // return `https://www.nba.com/${team}/api/1.1/json`;
 };
 
 // --->  ArenaInfo Component

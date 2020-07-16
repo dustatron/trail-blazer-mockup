@@ -25,6 +25,8 @@ import '../scss/components/_app.scss';
 function App() {
   return (
     <Fragment>
+      <PreGame />
+      {/* 
       <Router>
         <Switch>
           <Route exact path='/'>
@@ -34,24 +36,25 @@ function App() {
           <Route path='/pre-game' component={PreGame} />
           <Route path='/live-game' component={LiveGame} />
           <div className='container'>
-            {/* /////// Pre Game \\\\\\\ */}
+            
             <Route path='/hero' component={Hero} />
             <Route path='/CTA' component={CTA} />
             <Route path='/NewsFeed' component={NewsFeed} />
             <Route path='/ArenaInfo' component={ArenaInfo} />
 
-            {/* ////// Live Game \\\\\\\ */}
+ 
             <Route path='/hero-live' component={HeroLive} />
             <Route path='/cta-live' component={CTALive} />
             <Route path='/court-live' component={Court} />
             <Route path='/live-stats' component={LiveStats} />
 
-            {/* ////// Shared \\\\\\ */}
+       
             <Route path='/KeyPlayers' component={KeyPlayers} />
             <Route path='/UpcomingGames' component={UpcomingGames} />
           </div>
         </Switch>
       </Router>
+      */}
     </Fragment>
   );
 }
